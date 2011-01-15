@@ -1,0 +1,5 @@
+Model: Sarge
+Skins: red, blue, default, nuker
+Author: Needle (mailto: eagla [at] yandex.ru)
+This model is for NFK 075 or Tribes X
+This model replaces previous sarge model.

@@ -1,0 +1,659 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<TITLE>Need For Kill v0.50 - help</TITLE>
+
+<SCRIPT LANGUAGE="JavaScript1.2">
+<!--
+	function Display(section)
+	{
+		if (section == "intro")
+			intro.style.visibility = "visible";
+		else
+			intro.style.visibility = "hidden";
+		if (section == "controls")
+			controls.style.visibility = "visible";
+		else
+			controls.style.visibility = "hidden";
+		if (section == "gametyp")
+			gametyp.style.visibility = "visible";
+		else
+			gametyp.style.visibility = "hidden";
+		if (section == "models")
+			MODELS.style.visibility = "visible";
+		else
+			MODELS.style.visibility = "hidden";
+		if (section == "bind")
+			BINDINGS.style.visibility = "visible";
+		else
+			BINDINGS.style.visibility = "hidden";
+		if (section == "console")
+			CONSOLE.style.visibility = "visible";
+		else
+			CONSOLE.style.visibility = "hidden";
+		if (section == "objects")
+			objects.style.visibility = "visible";
+		else
+			objects.style.visibility = "hidden";
+		if (section == "nfkamp")
+			nfkamp.style.visibility = "visible";
+		else
+			nfkamp.style.visibility = "hidden";
+		if (section == "mp")
+			mp.style.visibility = "visible";
+		else
+			mp.style.visibility = "hidden";
+		if (section == "bugs")
+			BUGZ.style.visibility = "visible";
+		else
+			BUGZ.style.visibility = "hidden";
+		if (section == "helpa")
+			helpa.style.visibility = "visible";
+		else
+			helpa.style.visibility = "hidden";
+	}
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#000033" TEXT="#FFFFFF" alink="red" link="#FF0000">
+
+<div id="ex3" style="position: absolute; top: 30px; left: 35px; font-size: 20pt; font-style: bold; font-family: Impact; color: white">
+<font color=red>N</font>EED <font color=red>F</font>OR <font color=red>K</font>ILL<BR><font size=2 face=verdana>V0.50<br>by 3d[Power]<br>
+<a href="http://www.3dpower.org">www.3dpower.org</a><br></font>
+</div>
+ 
+<TABLE WIDTH=100% HEIGHT=100%>
+<TR><TD ALIGN=CENTER VALIGN=TOP WIDTH=200>
+
+<BR><BR><BR><BR><BR><BR>
+<FORM><input type="button" value="HOTSEAT" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('intro');">
+<p><input type="button" value="MULTIPLAYER" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('mp');">
+<p><input type="button" value="GAMETYPES" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('gametyp');">
+<p><input type="button" value="CONTROLS" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('controls');">
+<p><input type="button" value="MODELS,  DEMOS" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('models');">
+<p><input type="button" value="BINDINGS" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('bind');">
+<p><input type="button" value="CONSOLE" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('console');">
+<p><input type="button" value="ITEMS & REWARDS" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('objects');">
+<p><input type="button" value="NFKAMP" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('nfkamp');">
+<p><input type="button" value="TROUBLESHOOTING" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('bugs');">
+<p><input type="button" value="ABOUT HELP FILE" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('helpa');">
+</FORM>
+</TD><TD>
+
+<div ID="intro" style="visibility: visible; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>HOTSEAT</font></b><br>
+Hotseat Mode. (2 people at the same computer).<br>
+The "HotSeat" window consist of: <br> At the top-left - list of the maps. U can change maps, using up & down cursor keys.
+At the right you can see game settings and player properties. There u can edit properties of both players.
+1st player plays on the mouse, second on the keyboard. (u can redefine it). There is 4 parameters for
+Game Settings: "warmup, fraglimit,timelimit, gametype". Warmup - time before match starts.
+Fraglimit - Frag limitter. Timelimit - Time limitter. Gametype - a type of the game (DeathMatch,
+RailArena and Practice). Recomended settings for 1v1 is: warmup 180; fraglimit 0; timelimit 10.
+To begin the play press "Fight". When map loaded and the countdown began you can type console command
+"ready" (or press F10) to begin the match without warmup.
+<br><br>Available gametypes: DeathMatch, Rail Arena, Practice<Br>
+
+</div>
+
+<div ID="mp" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>MULTIPLAYER</font></b><br>
+Support up to 8 players.<Br>
+Support connection types: IPX, TCP\IP, Modem, Direct Cable.<br>
+One player must "host" game, others - join game.<br>
+<br>
+<B>Host game:</B><br>
+Select the map first. And then cofigure server settings:<Br>
+Hostname<Br>
+Allow Join Match - Cliets can connect at any time (if enabled). Cliets can connect only at the warmup time (if disabled)<br>
+Dedicated - Yes=server without server's players.<br>
+Synchronization - Synchronization level between server and cliets. Set this to  "Heavy" if fast connection speed available (LAN), or set to "Medium" or "Light" for ISDN connections.<br>
+<br><B>Join game:</B><br>
+Select the server in the server list and press FIGHT button.<Br>
+<br><B>Information:</B><br>
+There is a console command "net_coordinterpolate". Its control players movement smoothes. Default value is 85. If you see "lags" in the network player's movement then decrease this value, or increase if all is very good. 85, it is the most compartible value to the most of sutiations.<br>
+
+<br><B>Spectator mode:</B><br>
+To enable this mode type "spectator 1" at the console, before connect to server. Command "nextplayer" changes current player. Dedicated server is always in the spectator mode.<br>
+
+<br><B>Chat:</B><br>
+To send the chat white the message text at console and press CTRL+ENTER.<Br>
+
+<br><B>Colour names:</B><br>
+NFK ver 035 supports colour names. The method to paint your name is the same as in quake3. You must write a colour tag before letters. Supported colors: <font color=red>1</font><font color=lime>2</font><font color=yellow>3</font><font color=blue>4</font><font color=aqua>5</font><font color=#FF00FF>6</font><font color=white>7</font>. Put the "^" symbol before number. Example:<br>
+^1pla^3y^1er - <font color=red>pla</font><font color=yellow>y</font><font color=red>er</font>.<br>
+There is one more tag "^b", it makes text blinking, tag "^n" stops blinking.<br>
+//note: max name characters is 30.<br>
+
+<br><B>Voting:</B><br>
+You can toggle voting for some console command, and if number of positive (YES) votes will be enough to apply this command, it will be executed at server.<br>
+You can vote for: restart, ready, map, fraglimit, timelimit, capturelimit, domlimit, warmup,warmuparmor, forcerespawn, sync, sv_teamdamage, net_predict, sv_maxplayers.<br>
+Example: "callvote restart", "callvote map tourney4". For additional infromation, read voting console commands, at CONSOLE section.<br>
+
+
+<br><br>Available gametypes: DeathMatch, Teamplay, Rail Arena, Practice<Br>
+</div>
+
+
+<div ID="gametyp" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>GAMETYPES</font></b><br>
+Need For Kill ver 040 supports 7 game types: DeathMatch, Practice, Rail Arena, Team Play, Capture The Flag, Domination, Trick Arena.<Br><br>
+<font color=lime><b>DeathMatch</b></font><br> Free for all, 1 vs 1 or more ...<br>
+* Limits: fraglimit, timelimit<Br>
+* Active at: Hotseat, Multiplayer<Br><Br>
+
+<font color=lime><b>Practice</b></font><br> Same as DeathMatch, except players respawn with all weapons, 200 health, and 200 armor.<br>
+* Limits: fraglimit, timelimit<Br>
+* Active at: Hotseat, Multiplayer<Br><br>
+
+<font color=lime><b>Rail Arena</b></font><br> Only RailGun Available. All items are removed. Players respaws already with RailGun.<br>
+* Limits: fraglimit, timelimit<Br>
+* Active at: Hotseat, Multiplayer<Br><br>
+
+<font color=lime><b>Team Play</b></font><br> 
+is a team Game, players can play in two teams (Blue and red). For killing your team-mate, your team looses one frag. Your team score then equials sum of team-mates frags.<br>
+* Limits: fraglimit, timelimit<Br>
+* Active at: Multiplayer<Br>
+* sv_teamdamage (hurting your team-mates): 1 (yep).<br>
+* Special panel, called TEAMBAR, is available in this type of game, it displays the status of you and your team-mates.
+To configure your TEAM-BAR, please check Commands Console, these commands start from "ch_teambar....".<br><br>
+
+<font color=lime><b>Capture The Flag</b></font><br>is a team Game,the aim of the game is : to steal the enemy's flag, and bring it to your base (you flag must be at your base to score). For flag capture, your team earns capture point. The team who has more capture points, wins !!!<br>
+* Limits: capturelimit, timelimit<Br>
+* Active at: Multiplayer<Br>
+* CTF Bonuses: Flag capture - 5 frags. Flag recovery - 1 frag.<br>
+* sv_teamdamage (hurting your team-mates): 0 (nope).<br>
+* Special panel, called TEAMBAR, is available in this type of game.<br><br>
+
+<font color=lime><b>Domination</b></font><br>is a team Game, While you have a control of a domination point, your team gains points. The first team who reach "dominationlimit" points wins the match.<br>
+* Limits: domlimit, timelimit<Br>
+* Active at: Multiplayer<Br>
+* sv_teamdamage (hurting your team-mates): 0 (nope).<br>
+* Special panel, called TEAMBAR, is available in this type of game.<br>
+* Special panel, called DOMBAR, in this type of game (it displays domination status).
+To configure your DOMBAR, please check Commands Console, these commands starts from "ch_dom....".<br><br>
+
+<font color=lime><b>Trix Arena</b></font><br> 
+Single Player game mode. like Trix Arena'playing game, you must pass through the trick map as fast as You can. <br>
+
+The records table for trix maps is located on powersite.narod.ru. To take part in Trix Arena you must pass through the map for minimal time which can join into the records table, then send ARCHIVED demo to me by email.<Br>
+
+The Requirements:<Br>
+Name of the player must be Yours. Demos must begin with warmup less than 10 seconds.<Br>
+The Name of the archive: map_time_your_name. (trick1_11_37s_yourname).<br>
+The great system for advanced play and record demo under trix arena was implemented in version 0.31. Use console command "trixmasta 1" to select this mode.<Br>
+In this mode:<br>
+- Warmup automatically 3 sec.<br>
+- Demo begins write itself at start of the map.<Br>
+- When player died, map restarts and demo records again.<br>
+- When button F12 pressed, map restarts and demo records again.<br>
+- When you pass the map, NFK names the demofile itself [map]+[time]+[playername].<br>
+* Limits: none<br>
+* Active at: Hotseat<br><br>
+<Br><br>
+<i><Br><br>Notes for mapmakers:<br>
+* CAPTURETHEFLAG: In this game mode, players respawns at REDRESPAWN, and BLUERESPAWN points instead of RESPAWN point. In other gametypes, "redrespawn" and "bluerespawn" are not used.<Br>
+* DOMINATION: NFK will not start domination map, which contains DOMPOINTS <> 3.<br>
+</i>
+</div>
+
+
+
+<div ID="controls" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>CONTROLZ</font></b><br>
+You can rebind controls through "player properties"+"customize controlz" screen.<br><br>
+Default controls:<Br> <br>
+<B>Player 1: </b><font color=#ccccc>// mouse and keyboard control.</font><br>
+Movement - Cursorleft, Cursorright<br>
+Jump - Cursorup<br>
+Crouch - Cursordown<br>
+Fire - Left Mouse Button<Br>
+Next weapon - Right Mouse Button<br>
+Look up - Mouse wheel up<br>
+Look down - Mouse wheel down<br>
+<font color=#ccccc>// u can adjust mouse speed by console command "sensitivity".</font><br><Br>
+<B>Player 2: </b><font color=#ccccc>// keyboard control only.</font><br>
+left - A;<br>
+right - D;<br>
+up - W;<br>
+crouch - S;<br>
+Fire - R;<br>
+Next weapon - Q;<br>
+look up - T;<br>
+look down - F;<br><br>
+Maybe it is not the best player 2 controls, but you can rebind it. I have noticed that if walk buttons binded on the left of keyboard and look/fire buttons binded on the centre of keyboard, then buttons clipping vastly decreases. Read the "BINDINGS" section for more detailes.<br>
+</div>
+
+<div ID="MODELS" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>MODELZ</font></b><br>
+It is possible to play different models in NFK. NFK models - player's look. Installation to models: all models is kept in game catalogue, in basenfk\models\ directory. For example, You download the Klesk model. Copy the "klesk" directory from archive klesk.zip to basenfk\models\ directory in the NFK catalogue. Model will become available in list of the models after this.
+Also you can download additional models from http://powersite.narod.ru. You can choose the model through the player properties window or You can use console command "model klesk+blue","p2model klesk+red". Theoretically you may create your own models. It's painting by yourself and with NMDL program. You can find NMDL program at powersite.narod.ru
+<br><br>
+<font color=White size=5 face=impact><B>DEMOZ</font></b><br>
+It is possible to record/replay demos. To begin record You must start the game and write the console command "record mydemo1" or "autorecord". When match ends demo's recording stops itself, but if you want to stop record before the end of the match, You can use "stoprecord" console command. It is possible to replay demos from the main menu, in section DEMOS or by console command "demo mydemo1".
+There is command "speeddemo" for accelerate\decelerate demo's replay speed. Read the "CONSOLE" section for more detailes.<br>
+//note: demos with zip compression.<br>
+//note: if you are client and recording a demo, you must to record all match because if you break it then demo will not save stats. Stats comes from server at the end of match.
+<br><Br>
+
+</div>
+
+<div ID="BINDINGS" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>BINDINGZ</font></b><br>
+You can rebind controls through "player properties"+"customize controls" screen.<br><br>
+
+NOTE:
+It's impossible to bind series of the commands (for example "bind space fire; nextweapon; kill".<br>
+
+It is possible to bind mouse, and completely rebind mouse controls on keyboard (versions nfkbeta 0.30 and more).
+You can write Your configs to fast NFK setup... <br><br>
+It is all binding commands:<br>
+<i>bind {key} {action}</i><br><br>The {key} parameter may be:
+<i><br><font color=lime>
+A,B,C,D....Z<br>
+1,2,3..0<br>
+shift, ctrl, alt, tab, space, capslock, num0, num1, num2, num3, num4, num5, num6, num7, num8, num9, num0,
+num/, num*, num-, num+, num., enter, insert, home, pgup, pgdown, delete, end, backspace, leftarrow, rightarrow, uparrow, downarrow,<br>
+mbutton1,mbutton2,mbutton3</font> - mouse buttons.</i><br><br>
+<i>The {action} parameter may be: <br></i><font color=lime>
+moveleft, moveright, moveup, movedown, nextweapon, prevweapon, lookup, lookdown, fire, center, weapon0, weapon1, weapon2, weapon3, weapon4, weapon5, weapon6, weapon7, weapon8, p2moveleft, p2moveright, p2moveup, p2fire, p2nextweapon, p2prevweapon, p2lookup, p2lookdown, p2center, p2weapon0, p2weapon1, p2weapon2, p2weapon3, p2weapon4, p2weapon5, p2weapon6, p2weapon7, p2weapon8, scoreboard.<br></font></i><br>
+Example:<br>
+the "p2" attachment means, that this command for the second player. Below is attached example of full bindlist for player 2:<br>
+<i>bind leftarrow moveleft<br>
+bind a p2moveleft<br>
+bind 1 p2weapon2<br>
+bind e p2weapon3<br>
+bind r p2weapon4<br>
+bind alt p2weapon5<br>
+bind 4 p2weapon6<br>
+bind capslock p2weapon7<br>
+bind tab p2weapon1<br>
+bind k p2lookup<br>
+bind h p2lookdown<br>
+bind j p2fire<br>
+bind w p2moveup<br>
+bind s p2movedown<br>
+bind a p2moveleft<br>
+bind d p2moveright<br></i>
+<br>NOTE: Player's 1 binded <font color=lime>lookup, lookdown</font> keys will work if "mouselook 0" (type this command in console)<br><br>
+To bind mouse buttons use command "bind mbutton1 fire" "bind mbutton2 weapon6" "bind mbutton3 center".<br>
+Bind "Center" center the weapon look.<br>
+You create config to fast NFK setup. Just write all commands if file [your_config_name].cfg and place this file in basenfk direcrory of NFK catalogue. Type "exec your_config_name" in console and all Your config's commands will be applyed.<Br>
+If you don't want to type "exec your_config_name" every time, You can create autoexec.cfg, and type "exec your_config_name" in it. Place autoexec.cfg in basenfk folder of NFK dierctory. Now your config will be loaded automatically.<br>
+<br>Some more console commands:<Br>
+unbindkeys<br>
+p2unbindkeys<br>
+p1defaultcontrols<br>
+p2defaultcontrols<br>
+</div>
+
+<div ID="CONSOLE" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>CONSOLE COMMANDZ</font></b><br>
+Key "~" toggles console.<br><br>
+<font color=lime>bg</font> [1-8] - background of the map.<br>
+<font color=lime>crosscolor</font> [1-7] - color of the crosshair of the player 1<br>
+<font color=lime>p2crosscolor</font> [1-7] - color of the crosshair of the player 2<br>
+<font color=lime>crosstype</font> [0-4] - type of the crosshair of the player 1<br>
+<font color=lime>p2crosstype</font> [0-4] - type of the crosshair of the player 2<br>
+<font color=lime>fraglimit</font> [0-999] - frag limitter<br>
+<font color=lime>timelimit</font> [0-999] - time limitter<br>
+<font color=lime>quit</font> - quit.<br>
+<font color=lime>sensitivity</font> [1-9] - mouse sensitivity (speed)<br>
+<font color=lime>restart</font> - restarts map. match begins again<br>
+<font color=lime>drawfps</font> [0-1] - number of frames per second. Must be always 50 for best play.<br>
+<font color=lime>ready</font> - begin the match - end of warmup<br>
+<font color=lime>map</font> - change map. for example "map dm2"<br>
+<font color=lime>keybsensitivity</font> [1-9] - a velocity (speed) of crosshair's movement, when play on keyboard.<br>
+<font color=lime>keybaccelerate</font> [0-9] - a accelerate of crosshair's movement, when play on  keyboard (for player 1).<br>
+<font color=lime>p2keybaccelerate</font> [0-9] - a accelerate of crosshair's movement, when play on  keyboard (for player 2).<br>
+<font color=lime>warmup</font> [1-999] - Time for preparation<Br>
+<font color=lime>railcolor</font> [1-7] - a color of the railgun's ray for player 1<br>
+<font color=lime>p2railcolor</font> [1-7] - a color of the railgun's ray for player 2<br>
+<font color=lime>bind</font> - assing a key<br>
+<font color=lime>exec</font> - Execute config<br>
+<font color=lime>unbindkeys</font> - unbinds all controls for player 1.<br>
+<font color=lime>p2unbindkeys</font> - unbinds all controls for player 2.<br>
+<font color=lime>railtrailtime</font> [1-14] - time of railgun's ray extinction.<br>
+<font color=lime>hitsound</font> [0-1] - play hitsound when one player hits other<br>
+<font color=lime>gibvelocity</font> [0-1] - meat flies away in other side of hit side (not recommended).<br>
+<font color=lime>gibblood</font> [0-1] - gibs blood<br>
+<font color=lime>disconnect</font> - unloads the map and go back into menu.<br>
+<font color=lime>stats</font> - shows the statistics before the end of the game.<Br>
+<font color=lime>currenttime</font> - shows current system time.<br>
+<font color=lime>halfquit</font> - use it, if "quit" command does not work.<br>
+<font color=lime>record</font> - begins demo record<br>
+<font color=lime>stoprecord</font> - ends demo record<br>
+<font color=lime>demo</font> - plays demo<br>
+<font color=lime>doorsounds</font> [0-1] - a sounds of the doors<Br>
+<font color=lime>cameratype</font> [0-1] - a type of the camera (fixed\follow player 1)<br>
+<font color=lime>mousesmooth</font> - a limiter of mouse speed<br>
+<font color=lime>gofullscreen</font> - full screen mode<br>
+<font color=lime>gowindow</font> - window mode<br>
+<font color=lime>weaponswitch_on_end</font> [0-2] - auto switch of the weapon for player 1.<br>
+<font color=lime>p2weaponswitch_on_end</font> [0-2] - auto switch of the weapon for player 2.<br>
+<font color=lime>model</font> - model of the player 1 (model modelname+skinname)<br>
+<font color=lime>p2model</font> - model of the player 2<br>
+<font color=lime>allowmapschangebg</font> [0-1] - allow the map to change the background.<br>
+<font color=lime>leavearena</font> - unloads the map and go back into menu.<br>
+<font color=lime>warmuparmor</font> - an amount of armor in warmup.<br>
+<font color=lime>shownick</font> [0-1] - show name of the player.<br>
+<font color=lime>autoshownick</font> [0-1] - show name of the player (automatically).<br>
+<font color=lime>autorecord</font> - begins demo record (the name of demo is selected automatically)<br>
+<font color=lime>mouselook</font> [0-1] - (1)=player 1 looks on mouse; (0)=player 1 looks on keyboard.<br>
+<font color=lime>corpsetime</font> [0-60] - an amount of seconds, when dead body is situated on map. After this time it takes away.<br>
+<font color=lime>forcerespawn</font> [2-60] - a max amount of seconds when dead player can not respawn.<br>
+<font color=lime>weapbartime</font> [0-250] - - time to show weapon panel for player 1.<br>
+<font color=lime>p2weapbartime</font> [0-250] - - time to show weapon panel for player 2.<br>
+<font color=lime>sndrestart</font> - restart sound system.<br>
+<font color=lime>midiplay</font> - begin to play music from basenfk\music\*.mid<br>
+<font color=lime>midinext</font> - play next midi track.<br>
+<font color=lime>midistop</font> - stops midi music.<br>
+<font color=lime>messagetime</font> [0-500] - time to show one message.<br>
+<font color=lime>log</font> [0-1] - OFF\ON writing log file.<br>
+<font color=lime>noplayer</font> [0-2] - removes player. (0=all player exists) (1=no player 1) (2=no player 2). The Command works from the main menu only.<br>
+<font color=lime>transparentstats</font> [0-1] - (not) transparent statistics.<br>
+<font color=lime>echo text</font> - show the message "text".<br>
+<font color=lime>menucolor</font> [1-6] - menu color, which is caused by ESC button in playtime.<br>
+<font color=lime>mp3play</font> - nfkamp: begin to play mp3 from playlist.<br>
+<font color=lime>mp3next</font> - nfkamp: next track in playlist.<br>
+<font color=lime>mp3stop</font> - nfkamp: stop playing.<br>
+<font color=lime>mp3reset</font> - nfkamp: stop playing + playlist reload.<br>
+<font color=lime>mp3volume</font> - nfkamp: music volume level.<br>
+<font color=lime>volume</font> - volume of the game sounds.<br>
+<font color=lime>speeddemo</font> [0-40] - accelerate\decelerate demo's replay speed. Normal velocity is 20.<br>
+<font color=lime>gauntletnextweapon</font> - is gauntlet in list of weapons (nextweapon, prevweapon) of the player 1.<br>
+<font color=lime>p2gauntletnextweapon</font> - is gauntlet in list of weapons (nextweapon, prevweapon) of the player 2.<br>
+<font color=lime>trixmasta</font> - enabling the advanced trix arena mode. (in detail in "TRIX ARENA" section).<br>
+<font color=lime>showmapinfo</font> - [not] show the map information at the beginning of the gameplay<br>
+<font color=lime>p1defaultcontrols</font> - Throws player 1 controls to default.<br>
+<font color=lime>p2defaultcontrols</font> - Throws player 2 controls to default.<br>
+<font color=lime>railarenainstagib</font> [0-1] - instagib mode in railarena.<Br>
+<font color=lime>r_transparentbulletmarks</font> [0-1] - transparent bullet marks.<Br>
+<font color=lime>r_flashingitems</font> [0-1] - flashing medikits.<br>
+<font color=lime>r_alphaitemsrespawn</font> [0-1] - items appears using its alpha channel.<Br>
+<font color=lime>r_transparentexplosions</font> [0-1] - transparent explosions.<Br>
+<font color=lime>r_railprogressivealpha</font> [0-1] - itsa railgun setting. try both values. leave better one.<br>
+<font color=lime>r_railsmooth</font> [0-1] - smooth railtrail.<Br>
+<font color=lime>r_wateralpha</font> [25-255] - grade of water tranparency.<Br>
+<font color=lime>r_drawbubbles</font> [0-1] - draw bubbles?.<Br> 
+<font color=lime>r_statusbaralpha</font> [0-255] - grade of statusbar tranparency.<Br> 
+<font color=lime>shownickatsb</font> - show nicknames at the top of statusbarz<Br>
+<font color=lime>spectator</font> [0-1] - toggles spectator mode (menu only, multiplayer only).<Br>
+<font color=lime>traffic</font> - in\out traffic.<br>
+<font color=lime>getplayersid</font> - shows players ID.<br>
+<font color=lime>kickplayer</font> [ID] - Kick player (requires playerID).<br>
+<font color=lime>sync</font> [1-3] - client-server synchronization level.<br>
+<font color=lime>m_invert</font> [0-1] - mouse invert<Br>
+<font color=lime>m_rotated</font> [0-1] - mouse Y axe changes to X axe<br>
+<font color=lime>m_accelerate</font> [0-15] - mouse acceleration.<Br>
+<font color=lime>net_coordinterpolate</font> [0-100] - players coordinates smoothes (to avoid lag effect) (multiplayer only).<Br>
+<font color=lime>enemymodel</font> - replaces enemy models to this model<br>
+<font color=lime>ipaddress</font> - Shows IP Address.<br>
+<font color=lime>sv_allowjoinmatch</font> [0-1] - Cliets can connect at any time (if enabled). Cliets can connect only at the warmup time (if disabled)<br>
+<font color=lime>sv_dedicated</font> [0-1] - Server with(out) server's player.<Br>
+<font color=lime>sv_hostname</font> - host name.<Br>
+<font color=lime>nextplayer</font> - switch to another player in the demo or in the spectator mode.<br>
+<font color=lime>bar2assign</font> [ID] - assigns statusbar2 to selected player (requires playerID).<br>
+<font color=lime>drawfragbar</font> - frags minipanel. multiplayer only.<Br>
+<font color=lime>fragbarx</font> - frags minipanel position (x).<Br>
+<font color=lime>fragbary</font> - frags minipanel position (y).<Br>
+<font color=lime>sv_lock</font> - Makes commands "timelimit, fraglimit, forcerespawn, railarenainstagib, sync, sv_overtime, sv_teamdamage" read only. To remove lock you have to shutdown server.<Br> 
+<font color=lime>sv_overtime</font> [0-30] - Additional time if match is tied (teamplay only).<Br>
+<font color=lime>sv_teamdamage</font> [0-1] - (not) hurt teammaters.<Br>
+<font color=lime>zoomwindow</font> - stretches window to desktop size. (windowed mode only)<Br>
+<font color=lime>join red</font> - join red team (teamplay only)<Br>
+<font color=lime>join blue</font> - join blue team (teamplay only)<Br>
+<font color=lime>join auto</font> - select's team automatically (teamplay only)<Br>
+
+<font color=lime>announcer</font> [0-1]: score announcer, ("youre lost the lead" or "teams for tied" etc (it is sounds)).<Br>
+<font color=lime>teammodel</font> [model+skin]: assign a specified model to your teammates.<Br>
+<font color=lime>cl_avidemo</font> (number): consecutively screenshot saves to basenfk\ directory. With filename 0001.jpg. If (number) is specified, then nfk will start saving from (number).jpg.<br>
+<font color=lime>sv_testplayer2</font>: this command available only in multiplayer. It spawns second player at server. second player have player2 controls. It emulates hotseat in multiplayer, so, you can play with 3 players, with only 2 comps :) !<br>
+<font color=lime>r_bgmotion</font> [0-1]: Game background moves not synchronous with camera, it gives spatial effect. (only at big maps).<br>
+<font color=lime>r_railstyle</font> [0-4]: Style of rail ray.<Br>
+<font color=lime>fill_bgr</font> [$AABBCC]: Background color fill (only with "drawbackground 0"). Where AA=blue, BB=green, CC=red. Example: "fill_bgr $0000FF" - fill with red. ($hex values).
+<font color=lime>ch_conspeed</font> [1-480]: Speed of console movement.<Br>
+<font color=lime>ch_conheight</font> [64-480]: Maximum console height.<Br>
+<font color=lime>ch_conalpha</font> [1-255]: Console's transparency level.<Br>
+<font color=lime>ch_constretch</font> [0-1]: Console background stretching. (only with 040_CUSTOM_GRAFIX (read basenfk\custom\custom.txt)).<Br>
+<font color=lime>clear</font> : Clear console (remove messages).<Br>
+<font color=lime>capturelimit</font> : Limit of flag captures. (CTF Only)<Br>
+<font color=lime>domlimit</font> : Limit of domination score<Br>
+<font color=lime>hidep2statusbar</font> : Hide player2's statusbar.<Br>
+<font color=lime>r_markemptydeath</font> [0-1]: Makes EMPTY and DEATH bricks visible.<Br>
+<font color=lime>r_fx_smoke</font> [0-1]: FX: new 040 smoke<Br>
+<font color=lime>r_fx_rlbfg</font> [0-1]: FX: rocket & bfg light.<Br>
+<font color=lime>r_fx_plasma</font> [0-1]: FX: new 040 plasma.<Br>
+<font color=lime>r_fx_quad</font> [0-1]: FX: quad player light. <Br>
+<font color=lime>r_fx_explo</font> [0-1]: FX: explosions light (rg,gl,bfg).<Br>
+<font color=lime>cmdlist</font> : Shows list of console commands.<Br>
+<font color=lime>say_team</font> [text]: Send chat to your teammates (only teammates) (multiplayer team game only)<Br>
+<font color=lime>ch_dombarpos</font>: DOMBAR Position (panel, which indicates status of Domination game) Y Axis<Br>
+<font color=lime>ch_dombarstyle</font> [0-3]: Specify style of DOMBAR.<Br>
+<font color=lime>randommodels</font> : Assign random models to all players.<Br>
+<font color=lime>ch_teambar_showmyself</font> [0-1] - show my self in team bar?<Br>
+<font color=lime>ch_teambar_color</font> [0-13] - color of TEAMBAR<Br>
+<font color=lime>ch_teambar_style</font> [0-3] - font style of TEAMBAR.<Br>
+<font color=lime>cl_avimode</font> [0-1]: 0 - cl_avidemo output is JPG. 1 - cl_avidemo output is BMP.<Br>
+<font color=lime>writeconfig</font>: "writeconfig myconfig", current nfk setting will save to myconfig.cfg<Br>
+<font color=lime>nextwpn_skipempty</font> [0-1]: if you choose next weapon by pressing "nextweapon" key, nfk will skip guns which doent have ammo.<Br>
+<font color=lime>p2nextwpn_skipempty</font> [0-1]: same thing, but for player2.<Br>
+<font color=lime>ch_showrecordinglabel</font> [0-1]: (dont) show "recording xxxx.ndm" label if recording demo.<Br>
+
+<font color=lime>connect</font> xx.xx.xx.xx: nfk will connect to the specified ip address<br>
+<font color=lime>sv_maxplayers</font> [2-8]: maximum amout of players which allowed at this server<br>
+<font color=lime>net_guaranteed</font> [0-1]: packet lost prevention. Recommended to be always enabled.<br>
+<font color=lime>net_predict</font> [0-1]: nfk guesses player's position based on player's ping. Recommended to be enabled, expecially at dedicated servers.<br>
+<font color=lime>minimize</font> : minimizes nfk window.<br>
+<font color=lime>ipinvite</font> xx.xx.xx.xx: invites specified ip address to your server. Useful then connection is available only to one direction .<br>
+<font color=lime>callvote</font> consolecommand: Voting. You can toggle voting for some console command, and if number of positive (YES) votes will be enough to apply this command, it will be executed at server.<Br>
+<font color=lime>net_showbandwidth</font> [0-1]: shows channel current bandwidth, bytes/sec (network).<br>
+<font color=lime>vote</font> [yes/no]: Vote YES or NO, if voting is active.<br>
+<font color=lime>sv_allowvote</font> [0-1]: Server allow voting.<br>
+<font color=lime>sv_vote_percent</font> [1-100]: If percent of positive votes is bigger than "sv_vote_percent" then command will be executed at server.<br>
+<font color=lime>sv_allowvote_restart</font> [0-1]: Server allow voting for "restart".<br>
+<font color=lime>sv_allowvote_fraglimit</font> [0-1]: Server allow voting for "fraglimit".<br>
+<font color=lime>sv_allowvote_timelimit</font> [0-1]: Server allow voting for "timelimit".<br>
+<font color=lime>sv_allowvote_capturelimit</font> [0-1]: Server allow voting for "capturelimit".<br>
+<font color=lime>sv_allowvote_domlimit</font> [0-1]: Server allow voting for "domlimit".<br>
+<font color=lime>sv_allowvote_ready</font> [0-1]: Server allow voting for "map".<br>
+<font color=lime>sv_allowvote_map</font> [0-1]: Server allow voting for "restart".<br>
+<font color=lime>sv_allowvote_warmup</font> [0-1]: Server allow voting for "warmup".<br>
+<font color=lime>sv_allowvote_warmuparmor</font> [0-1]: Server allow voting for "warmuparmor".<br>
+<font color=lime>sv_allowvote_forcerespawn</font> [0-1]: Server allow voting for "forcerespawn".<br>
+<font color=lime>sv_allowvote_sync</font> [0-1]: Server allow voting for "sync".<br>
+<font color=lime>sv_allowvote_sv_teamdamage</font> [0-1]: Server allow voting for "sv_teamdamage".<br>
+<font color=lime>sv_allowvote_net_predict</font> [0-1]: Server allow voting for "net_predict".<br>
+<font color=lime>sv_allowvote_sv_maxplayers</font> [0-1]: Server allow voting for "sv_maxplayers".<br>
+
+<br>If You enter the command without value, You'll see it's current value.<br><br>
+</div>
+
+<div ID="objects" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>ITEMZ & REWARDZ</font></b><br>
+<table border=0 cellpadding=2 cellspacing=1 align=center>
+<tr bgcolor="#000044" align="center"><td width=33%>Weapons</td>
+<td width=33%>Name</td>
+<td width=33%>DMG</td>
+</tr>
+<tr align="center">
+<td><img src="img/gauntl.gif"></td>
+<td>Gauntlet</td>
+<td>dmg: 35.</td>
+</tr><tr align="center">
+<td><img src="img/machinegun.gif"></td>
+<td>Machine Gun</td>
+<td>dmg: 5.</td>
+</tr><tr align="center"><td><img src="img/shotgun.gif"></td>
+<td>Shotgun</td>
+<td>dmg: 7-75.</td>
+</tr><tr align="center"><td><img src="img/grenade.gif"></td>
+<td>Grenade Launcher</td>
+<td>dmg: 65.</td>
+</tr><tr align="center"><td><img src="img/rocket.gif"></td>
+<td>Rocket Launcher</td>
+<td>dmg: 80-100.</td>
+</tr><tr align="center"><td><img src="img/shaft.gif"></td>
+<td>Lightning gun (Shaft)</td>
+<td>dmg: 2-3.</td>
+</tr><tr align="center"><td><img src="img/rail.gif"></td>
+<td>Railgun</td>
+<td>dmg: 75.</td>
+</tr><tr align="center"><td><img src="img/plasma.gif"></td>
+<td>Plasma gun</td>
+<td>dmg: 14.</td>
+</tr><tr align="center"><td><img src="img/bfg.gif"></td>
+<td>BFG</td>
+<td>dmg: 80-100.</td>
+</tr><tr bgcolor="#000044" align="center"><td width=33%>Ammo</td>
+<td width=33%>Name</td>
+<td width=33%>Description</td>
+</tr><tr align="center"><td><img src="img/machinea.gif"></td>
+<td>Bullets</td>
+<td>Ammo for Machinegun.</td>
+</tr><tr align="center"><td><img src="img/shotguna.gif"></td>
+<td>Shells</td>
+<td>Ammo for Shotgun.</td>
+</tr><tr align="center"><td><img src="img/grenadea.gif"></td>
+<td>Grenades</td>
+<td>Ammo for Grenade Launcher.</td>
+</tr><tr align="center"><td><img src="img/rocketa.gif"></td>
+<td>Rockets</td>
+<td>Ammo for Rocket Launcher.</td>
+</tr><tr align="center"><td><img src="img/shafta.gif"></td>
+<td>Lightnings</td>
+<td>Ammo for Lightning gun.</td>
+</tr><tr align="center"><td><img src="img/raila.gif"></td>
+<td>Slugs</td>
+<td>Ammo for Rail gun.</td>
+</tr><tr align="center"><td><img src="img/plasmaa.gif"></td>
+<td>Cells</td>
+<td>Ammo for Plasma gun.</td>
+</tr><tr align="center"><td><img src="img/bfga.gif"></td>
+<td>BFG ammo</td>
+<td>Ammo for BFG.</td>
+</tr><tr bgcolor="#000044" align="center"><td width=33%>Medikits</td>
+<td width=33%>Name</td>
+<td width=33%>Description</td>
+</tr><tr align="center"><td><img src="img/med5.gif"></td>
+<td>Medikit +5</td>
+<td>Adds 5 health.</td>
+</tr><tr align="center"><td><img src="img/med25.gif"></td>
+<td>Medikit +25</td>
+<td>Adds 25 health.</td>
+</tr><tr align="center"><td><img src="img/med50.gif"></td>
+<td>Medikit +50</td>
+<td>Adds 50 health.</td>
+</tr><tr align="center"><td><img src="img/med100.gif"></td>
+<td>Medikit +100</td>
+<td>Adds 100 health.</td>
+</tr><tr bgcolor="#000044" align="center"><td width=33%>Armor</td>
+<td width=33%>Name</td>
+<td width=33%>Description</td>
+</tr><tr align="center"><td><img src="img/shard.gif"></td>
+<td>Shard</td>
+<td>Adds 5 armor.</td>
+</tr><tr align="center"><td><img src="img/yellowarmor.gif"></td>
+<td>Yellow Armor</td>
+<td>Adds 50 armor.</td>
+</tr><tr align="center"><td><img src="img/redarmor.gif"></td>
+<td>Red Armor</td>
+<td>Adds 100 armor.</td>
+</tr><tr bgcolor="#000044" align="center"><td width=33%>Artefacts</td>
+<td width=33%>Name</td>
+<td width=33%>Description</td>
+</tr><tr align="center"><td><img src="img/fly.gif"></td>
+<td>Fly</td>
+<td>Ability to fly</td>
+</tr><tr align="center"><td><img src="img/haste.gif"></td>
+<td>Haste</td>
+<td>Increases walk and fire speed</td>
+</tr><tr align="center"><td><img src="img/battle.gif"></td>
+<td>Battle Suit</td>
+<td>Halfs received damage</td>
+</tr><tr align="center"><td><img src="img/regen.gif"></td>
+<td>Regeneration</td>
+<td>Regenerates 5 health per second</td>
+
+</tr><tr align="center"><td><img src="img/quad.gif"></td>
+<td>Quad Damage</td>
+<td>Increases inflicted damage in 3</td>
+</tr><tr align="center"><td><img src="img/invis.gif"></td>
+<td>Invisibility</td>
+<td>Invisibility (multiplayer only)</td>
+
+</tr><tr bgcolor="#000044" align="center"><td width=33%>Awards</td>
+
+<td width=33%>Name</td>
+<td width=33%>Description</td>
+</tr><tr align="center"><td><img src="img/impressive.gif"></td>
+<td>Impressive</td>
+<td>Earn for 3 no missed hits from railgun.</td>
+</tr><tr align="center"><td><img src="img/excellent.gif"></td>
+<td>Excellent</td>
+<td>Earn if in 2.5 seconds there was maded more than 1 frag.</td>
+</tr><tr align="center"><td><img src="img/humiliation.gif"></td>
+<td>Humiliation</td>
+<td>Earn for gauntlet kill.</td>
+</tr>
+</table>
+</div>
+
+<div ID="nfkamp" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>NFKAMP - MP3 Player</font></b><br>
+NFK AMP - Built-in NFK mp3 Player. You need to create a playlist to listening mp3 music. Playlist - file, located in basenfk\music\mp3list.dat. It consist of full paths to mp3 files. There is program "playlist generator for NFKAMP" - for comfortable creation of playlists. It is located in basenfk\music\nfkamp.exe <br><Br>
+NFKAMP commands:<br>
+<font color=lime>mp3play</font> - nfkamp: begin to play mp3 from playlist.<br>
+<font color=lime>mp3next</font> - nfkamp: next mp3 track.<br>
+<font color=lime>mp3stop</font> - nfkamp: stop any playing.<br>
+<font color=lime>mp3reset</font> - nfkamp: stop +playlist reload.<br>
+<font color=lime>mp3volume</font> - nfkamp: music volume.<br>
+</div>
+
+<div ID="BUGZ" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>TROUBLESHOOTING</font></b><br>
+If some strange bugs appears then delete file nfkconfig.cfg in directory basenfk and start the game.<br>
+Possible problems:<br><Br>
+<b>Nfk dont want to start:</b><BR>
+- U have pentium<=200.<Br>
+- Game requires DirectX8.1<br>
+- Your video card doesn't support Direct3D8 mode.<br>
+- Some files from original supply are missed.<br>
+- A NFK directory path contains incorrect letters or spaces.<br>
+
+<br><B>Nfk starts, but dont want to start map:</b><Br>
+- Map have old format. Convert it via nfkradiant.<br>
+- Some files from original supply are missed.<br><br>
+
+to increase FPS try to run NFK in 16-bit graphic mode.<br><br>
+
+More TROUBLESHOOTING and FAQ you can find at http://powersite.narod.ru<br><Br>
+
+<font color=White size=5 face=impact><B>COMMAND LINE PARAMETERZ</font></b><br>
+Parameters of command line enters as follows: "nfk.exe parameter1" or "nfk.exe parameter1 parameter2 parameter3".<br><br>
+<b>Parameters:</b><br>
+
+"lowbitdepth" - game starts in 16-bit graphic mode.<br>
+"nosound" - start without sound.<br>
+"protected" - start in protected mode. Most functions is unplugged.<br>
+"gowindow" - start in window.<br>
+<br>
+
+</div>
+
+<div ID="helpa" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>About Help File</font></b><br>
+This help file created by:<br><br>
+<b>
+3d[Power]<br>
+Baxxter<br>
+DJ Dimps<br>
+КАСПЕР<br>
+KAP^COH<br>
+</b>
+<br><br>
+</div>
+
+</TR></TD>
+</BODY>
+</HTML>

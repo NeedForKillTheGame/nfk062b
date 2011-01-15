@@ -1,0 +1,21 @@
+[DJ]_DimPs vs 3d[Power] 
+Type: Railarena 
+Win: 2 (Это значит, что выиграл второй плеер) 
+или Win: [DJ]_DimPs 
+Kill: 100 
+Death: 10 
+Suicides: 3 
+dmggiv: 100000 
+dmgrec: 1000 
+ex: 5 
+imp: 10 
+hum: 0 
+ 
+Kill: 100 
+Death: 10 
+Suicides: 3 
+dmggiv: 100000 
+dmgrec: 1000 
+ex: 5 
+imp: 10 
+hum: 0 

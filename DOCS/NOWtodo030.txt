@@ -1,0 +1,26 @@
+- AUTO_ENGLISH ENABLE
+- MAYBE: Telefrags
+- Pain sound stop when die
+- Item respawn configurable.
+- Mouse select in player2prop.
+- screenshot.
+- More clever TAB key at console.
+- "warmup" command dont work in trix arena.
+- NET: Sent gauntlet state packet to connected playerz.
+- NET: ready command
+- custom port
+- MP_STEP gamma.
+- 180*50 - bug warmup
+- synchronize: net time.
+- map playlist.
+- rcon
+- receive powerup states on GAMESTATE.
+
+-------------- 040 ----------
+- not limited size of area_waterillusion...
+- improove modem play (client auto enter game).
+- *.nmd valid model
+- demo ammo bug.
+
+- в новой версии в кредитах исправь ники Rocky, PQR и G3x.HiT_mAn на: 
+[NFK]-Rocky, [NFK]-PQR, [NFK]-HiT_mAn|G3x 

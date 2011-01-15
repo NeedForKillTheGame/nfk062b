@@ -1,0 +1,36 @@
+------------------------
+      Need For Kill
+       version 050
+      by  3d[Power]
+ http://www.3dpower.org
+------------------------
+Changes since NFK version 040.
+Changes in NFK050 are mostly affecting network gaming and all regarding it
+
+- New, greatly improoved and optimized network code. Protocol also changed. Nfk uses UDP now.. (port 29991).
+- Online NFK Master Server was added, which named "NFK PLANET". It is a place where nfk players can play with each other.
+
+- Added: if nfk server is in fullscreen mode, and minimized, then somebody connects, nfk popup it self.
+- Added: command "sv_maxplayers", for limiting maximum amount of players.
+- Added: command "ipinvite". invites specified ip address to your server. Useful then connection is available only to one direction
+- Added: command "net_showbandwidth". shows channel current bandwidth, bytes/sec (network).
+- Added: command "minimize". minimizes nfk window
+
+- Added: VOTING. You can toggle voting for some console command, and if number of positive (YES) votes will be enough to apply this command, it will be executed at server.
+	You can vote for: restart, ready, map, fraglimit, timelimit, capturelimit, domlimit, warmup,warmuparmor, forcerespawn, sync, sv_teamdamage, net_predict, sv_maxplayers.
+	Example: "callvote restart", "callvote map tourney4".
+	Server's voting console commands: sv_allowvote, sv_vote_percent, sv_allowvote_restart, sv_allowvote_fraglimit, sv_allowvote_timelimit, sv_allowvote_capturelimit, sv_allowvote_domlimit, sv_allowvote_ready,
+	sv_allowvote_map, sv_allowvote_warmup, sv_allowvote_warmuparmor, sv_allowvote_forcerespawn, sv_allowvote_sync, sv_allowvote_sv_teamdamage, sv_allowvote_net_predict, sv_allowvote_sv_maxplayers.
+
+- Added: nfk remembers frags count of dropped players, and restores it upon players reconnect.
+- Fixed: several bugs in DEMOS screen. 
+- Changed: command "ipaddress" now improoved, now it show internal and external ip address.
+- Added: nfk guesses player's position based on player's ping. Recommended to be enabled, expecially at dedicated servers. (command "net_predict 1");
+- Improoved: shaft was greatly improoved, it not laggy now :)
+- Improoved: stability and efficiency of server, and dedicated server. Now it works more effectively then players count is more than 2.
+- Added: dedicated server chat ability
+- Fixed: sometimes multiplayer's demos, not work.
+- Fixed: sometimes clients cannot join, because of modified map (but maps was equial)
+- Fixed: bugs with midi music player.
+- Changed: long map names now stripped by mapnames viewer.
+- Fixed: bug in map editor with deleting objects
