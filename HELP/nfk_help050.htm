@@ -1,0 +1,638 @@
+<HTML>
+<HEAD>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251">
+<TITLE>Need For Kill v0.50 - help</TITLE>
+
+<SCRIPT LANGUAGE="JavaScript1.2">
+<!--
+	function Display(section)
+	{
+		if (section == "intro")
+			intro.style.visibility = "visible";
+		else
+			intro.style.visibility = "hidden";
+		if (section == "mp")
+			mp.style.visibility = "visible";
+		else
+			mp.style.visibility = "hidden";
+		if (section == "gametyp")
+			gametyp.style.visibility = "visible";
+		else
+			gametyp.style.visibility = "hidden";
+		if (section == "controls")
+			controls.style.visibility = "visible";
+		else
+			controls.style.visibility = "hidden";
+		if (section == "models")
+			MODELS.style.visibility = "visible";
+		else
+			MODELS.style.visibility = "hidden";
+		if (section == "bind")
+			BINDINGS.style.visibility = "visible";
+		else
+			BINDINGS.style.visibility = "hidden";
+		if (section == "console")
+			CONSOLE.style.visibility = "visible";
+		else
+			CONSOLE.style.visibility = "hidden";
+		if (section == "objects")
+			objects.style.visibility = "visible";
+		else
+			objects.style.visibility = "hidden";
+		if (section == "nfkamp")
+			nfkamp.style.visibility = "visible";
+		else
+			nfkamp.style.visibility = "hidden";
+		if (section == "bugs")
+			BUGZ.style.visibility = "visible";
+		else
+			BUGZ.style.visibility = "hidden";
+		if (section == "helpa")
+			helpa.style.visibility = "visible";
+		else
+			helpa.style.visibility = "hidden";
+	}
+
+//-->
+</SCRIPT>
+</HEAD>
+<BODY BGCOLOR="#000033" TEXT="#FFFFFF" alink="red" link="#FF0000">
+
+<div id="ex3" style="position: absolute; top: 30px; left: 35px; font-size: 20pt; font-style: bold; font-family: Impact; color: white">
+<font color=red>N</font>EED <font color=red>F</font>OR <font color=red>K</font>ILL<BR><font size=2 face=verdana>V0.50<br>by 3d[Power]<br>
+<a href="http://www.3dpower.org">www.3dpower.org</a><br></font>
+</div>
+ 
+<TABLE WIDTH=100% HEIGHT=100%>
+<TR><TD ALIGN=CENTER VALIGN=TOP WIDTH=200>
+
+<BR><BR><BR><BR><BR><BR>
+<FORM><input type="button" value="HOTSEAT" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('intro');">
+<p><input type="button" value="MULTIPLAYER" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('mp');">
+<p><input type="button" value="GAMETYPES" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('gametyp');">
+<p><input type="button" value="CONTROLS" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('controls');">
+<p><input type="button" value="MODELS,  DEMOS" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('models');">
+<p><input type="button" value="BINDINGS" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('bind');">
+<p><input type="button" value="CONSOLE" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('console');">
+<p><input type="button" value="ITEMZ & REWARDZ" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('objects');">
+<p><input type="button" value="NFKAMP" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('nfkamp');">
+<p><input type="button" value="TROUBLESHOOTING" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('bugs');">
+<p><input type="button" value="ABOUT HELP FILE" style="border-width: 1; border-color: #FFFFFF; font-family: Arial; font-size: 8pt; width: 150px; color: #FFFFFF; background-color: #000033" onClick="Display('helpa');">
+</FORM>
+
+</TD><TD>
+
+<div ID="intro" style="visibility: visible; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>HOTSEAT</font></b><br>
+Режим HOTSEAT (игра вдвоем за одним компьютером).<Br>
+Слева вверху список карт. Справа, настройки игры. Там же можно изменить свойства игроков. <br>1ый игрок играет на мышке. 2ой игрок играет на клавиатуре. Управление можно переназначить. <br>В настройки матча входят 4 параметра "warmup, fraglimit,timelimit,gametype". Warmup - время на подготовку перед матчем. Fraglimit - Ограничение по фрагам. Timelimit - Ограничение по времени. Gametype - тип игры (deathmatch, rail arena, practice).<br>
+Рекомендуемые (стандартные) настройки для игры 1v1 это: warmup 180; fraglimit 0; timelimit 10.<br>Чтобы начать игру, нажмите "fight".
+Когда загрузилась карта и начался отчет, можно на консоли набрать команду "ready" (или нажать F10) которая начнет матч без разыгровки.<Br><br>
+В HOTSEAT можно играть в типы игры: DeathMatch, Rail Arena, Practice<Br>
+</div>
+
+<div ID="mp" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>MULTIPLAYER</font></b><br>
+Многопользовательский режим. Поддерживается до 8 игроков.<Br>
+Чтобы поиграть в NFK по сети, вам нужно сначала установить соединение. Возможные соединения: IPX, TCP\IP, Modem, Direct Cable. Одному игроку нужно "создать" игру, то есть стать хостом. Для этого нужно нажать кнопку CREATE в окне MULTIPLAYER.<Br>
+<br>
+<B>Создание сервера:</B><br>
+Сначала выберите карту на которой будете играть. Потом сконфигурируйте настройки сервера:<Br>
+Hostname - Название Вашего сервера<Br>
+Allow Join Match - Клиенты могут подсоединяться в любое время, если выключено, то только вармапе.<br>
+Dedicated - Yes=сервер будет создан без серверных игроков.<br>
+Synchronization - Степень синхронизации данных между клиентом и сервером. На быстрых соединениях (LAN) нужно ставить Heavy, на более медленных Medium или Light. Параметр Synchronization уменьшает увеличивает сетевой трафик.<br>
+<br><B>Подсодинение к уже созданной игре:</B><br>
+В списке найденных серверов, выбрать нужный сервер и нажать FIGHT.<Br>
+<br><B>Важная информация:</B><br>
+1) Есть консольная команда net_coordinterpolate. Она отвечает за сглаживание перемещения сетевого игрока. По умолчанию эта переменная равна 85 (0-100). Если вы замечаете что игрок передвигается "лагами" то уменьшите это значение. А если игрок двигается более чем гладко, то это значение лучше увеличить. Но как правило значение 85 подходит для большинства случаев.<br>
+2) По поводу игры по модему. По модему лучше играть при наличии ISDN.<br>
+
+<br><B>Режим спектатора:</B><br>
+"Режим спектатора" это режим наблюдателя, то есть слежение за игрой без участия. Чтобы включить этот режим вам надо перед подсоединением к серверу набрать консольную команду "spectator 1". Переключение игроков осуществляется консольной командой "nextplayer". Dedicated сервер всегда находится в режиме spectator'a.<br>
+
+<br><B>Чат:</B><br>
+Чтобы отправить сообщение другим игрокам, вам надо набрать текст сообщения на консоли и нажать CTRL+ENTER.<br>
+
+<br><B>Цветные имена:</B><br>
+С версии 035 нфк поддерживает цветные имена (не только по мультиплееру). Форма записи имен такая же как в Quake3. Тоесть нужно в имени написать тэг, котрый означает цвет. Доступны следующие цвета: <font color=red>1</font><font color=lime>2</font><font color=yellow>3</font><font color=blue>4</font><font color=aqua>5</font><font color=#FF00FF>6</font><font color=white>7</font>. Перед номером нужно ставить символ "^". Примеры:<br>
+^1pla^3y^1er - <font color=red>pla</font><font color=yellow>y</font><font color=red>er</font>.<br>
+Еще есть тэг "^b", он делает текст мигающим, а тэг "^n" останавливает мигание.<br>
+//note: максимальная длина имени это 30 символов.<br>
+
+<br><B>Голосование (voting):</B><br>
+Присутствует возможность голосования (callvote) в мультиплеерных играх. Можно выдвигать на голование выбранную консольную команду, по проценту проголосовавших ЗА, выбирается, будет ли применена команда.<br>
+Возможно голосовать за конс команды: restart, ready, map, fraglimit, timelimit, capturelimit, domlimit, warmup,warmuparmor, forcerespawn, sync, sv_teamdamage, net_predict, sv_maxplayers.<br>
+Пример: "callvote restart", "callvote map tourney4". Подробнее читайте о консольных командах, относящихся к голосованию, в разделе CONSOLE.<br>
+
+
+<br><br>В MULTIPLAYER можно играть в типы игры: DeathMatch, Teamplay, Rail Arena, Practice<Br>
+</div>
+
+
+<div ID="gametyp" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>GAMETYPES</font></b><br>
+Типы игры. NFK 040 поддерживает 7 типов игры: DeathMatch, Practice, Rail Arena, Team Play, Capture The Flag, Domination, Trick Arena.<Br><br>
+<font color=lime><b>DeathMatch</b></font><br> В этом режиме игроки играют каждый сам за себя. Можно играть как вдвоем, так и толпой.<br>
+* Действующие лимиты: fraglimit, timelimit<Br>
+* Доступен в: Hotseat, Multiplayer<Br><br>
+
+<font color=lime><b>Practice</b></font><br> Тоже что и DeathMatch. Отличается тем, что игроки стартуют со всеми оружиями, 200 hp, и 200 брони.<br>
+* Действующие лимиты: fraglimit, timelimit<Br>
+* Доступен в: Hotseat, Multiplayer<Br><br>
+
+<font color=lime><b>Rail Arena</b></font><br> Битва только на RailGun. Все предметы с карты убираются. При респавне игроки уже имеют при себе RailGun.<br>
+* Действующие лимиты: fraglimit, timelimit<Br>
+* Доступен в: Hotseat, Multiplayer<Br><br>
+
+<font color=lime><b>Team Play</b></font><br> Командная игра. Игроки делятся на две команды, синяя и красная. За убийство своего напарника, команда теряет один фраг. Количество фрагов у команды равно сумме фрагов членов команды.<br>
+* Действующие лимиты: fraglimit, timelimit<Br>
+* Доступен в: Multiplayer<Br>
+* sv_teamdamage (ранение своих по команде): 1 (ранятся).<br>
+* В этом режиме игры доступна специальная панель TEAMBAR (Отображает Ваш статус и ваших напарников). Консольные команды по настройке TEAMBAR смотрите в разделе Console Commands, команды начинаются с "ch_teambar....".<br><br>
+
+
+<font color=lime><b>Capture The Flag</b></font><br> Командная игра. Цель игры: взять вражеский флаг, и принести его к себе на базу (ваш флаг должен там присутствовать). За захват флага ваша команда получает одно capture point. Команда, которая набрала больше capture points - победила.<br>
+* Действующие лимиты: capturelimit, timelimit<Br>
+* Доступен в: Multiplayer<Br>
+* CTF Бонусы: За захват флага игрок получает бонус 5 фрагов. За возвращение своего флага на базу - бонус 1 фраг.<br>
+* sv_teamdamage (ранение своих по команде): 0 (не ранятся).<br>
+* В этом режиме игры доступна специальная панель TEAMBAR.<br><br>
+
+<font color=lime><b>Domination</b></font><br> Командная игра. Есть несколько контрольных точек (dom point). Цель - получить контроль над этими точками (пройти через них, в результате чего их цвет поменяется на цвет вашей команды) и не потерять его. Очки (dom score) зарабатываются за каждую секунду, когда ваша команда котролирует эти точки. Команда набравшая большее количество очков (dom score), побеждает.<br>
+* Действующие лимиты: domlimit, timelimit<Br>
+* Доступен в: Multiplayer<Br>
+* sv_teamdamage (ранение своих по команде): 0 (не ранятся).<br>
+* В этом режиме игры доступна специальная панель TEAMBAR.<br>
+* В этом режиме игры доступна специальная панель "DOMBAR" (Отображает статус игры domination). Консольные команды по настройке DOMBAR смотрите в разделе Console Commands, команды начинаются с "ch_dom....".<br><br>
+
+<font color=lime><b>Trix Arena</b></font><br> Одиночный режим игры.
+Суть которого пройти trick карту за наименьшее время. На www.3dpower.org располагается таблица рекордов для триковых карт. Чтобы принять участие в Trix Arene вам надо пройти карту за время которое может войти в таблицу и прислать демку мне на мыло. Убедительная просьба, демы архивировать.<br>
+Требования к демке: Имя игрока должно быть Ваше. Демка должна начинаться с вармапа. Название файла: картa_время_ник. (trick1_20_04s_power).<br>
+Существует удобная система для прохождения карты и записи демы под trix arena. Включается этот режим консольной командой "trixmasta 1".<br>
+В этом режиме:<Br>
+- Вармап автоматически 5 сек.<br>
+- При старте карты, дема начинает сама записываться.<br>
+- При смерти игрока делается рестарт и запись демы.<br>
+- При нажатии на кнопку F12 делается рестарт и запись демы.<br>
+- При завершении карты, нфк сам называет демку [карта]+[время]+[ник].<br>
+* Действующие лимиты: нет<Br>
+* Доступен в: Hotseat<Br><br>
+<Br><br>
+<i><Br><br>Заметки для мапмэйкеров:<br>
+* CAPTURETHEFLAG: В режиме CTF игроки появляются не на обычных
+RESPAWN позициях, а на REDRESPAWN и BLUERESPAWN позициях, в
+зависимости от команды игрока. Но обычные респавны тоже должны присутствовать,
+для респавна игроков в первый раз (когда они еще не выбрали команду). В других режимах игры,
+red respawn и respawn blue не используются.<br>
+* DOMINATION: NFK не запустит режим DOMINATION на карте, где dompoints <> 3<br>
+</i>
+
+
+</div>
+
+
+
+<div ID="controls" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>CONTROLZ</font></b><br>
+Переназначить управление можно через player properties+customize controlz<br><br>
+Управление по умолчанию:<br><br>
+Управление игрока 1:<br>
+Левая кнопка мыши - стрелять; Взмах мыши вверх - смотреть вверх.Взмах мыши вниз - смотреть вниз. Скорость мыши настраивается консольной командой "sensitivity". Подефалту курсором можно ходить. Правая кнопка мыши - менять оружие.<br><br>
+Управление игрока 2:<br>
+Влево - A;<br>
+Вправо - D;<br>
+Вверх - W;<br>
+Стрелять - R;<br>
+Cледущее оружие - Q;<br>
+Смотреть вверх - T;<br>
+Смотреть вниз - F;<br>
+У игрока 2 конечно не особо удобное расположение кнопок, но вы можете его перебиндить. Я заметил что если хождение биндить слева клавы, а смотрение биндить в центр клавы, то зажимание кнопок значительно уменьшается. Подробнее читайте раздел "BINDINGS".  
+</div>
+
+<div ID="MODELS" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>MODELZ</font></b><br>
+В NFK можно играть разными моделями. Модели NFK - это внешний вид игрока. Установка модели: все модели хранятся в каталоге с игрой в папке basenfk\models\ . К примеру, Вы скачали модель klesk. Папку klesk из архива klesk.zip переписываете в каталог с игрой в папку basenfk\models\ . После чего модель станет доступной в списках моделей.<br>
+Дополнительные модели можно скачать с powersite.narod.ru<br>
+Выбирать модель можно через окно player properties
+или через консольную команду "model klesk+blue","p2model klesk+blue".
+Теоретически вы можете создавать свои модели. Создаются они с помощью программы NMDL которую можете найти на powersite.narod.ru 
+<br><br>
+<font color=White size=5 face=impact><B>DEMOZ</font></b><br>
+В игре можно демы писать\проигрывать. Чтобы начать запись надо сначала стартовать игру (на карте). и написать команду "record mydemo1" или "autorecord". Когда матч закончится демка остановиться сама, но если вы хотите завершить запись до конца матча, то надо набрать "stoprecord". Проиграть демку можно из главного меню, в разделе DEMOS или консольной командой "demo mydemo1".<br>Есть команда "speeddemo" для ускорения\замедления скорости проигрывания демки, подробнее в разделе "CONSOLE".<br>//note: С версии 035 демки с zip компрессией.<br>//note: Если вы записываете демку будучи клиентом, то желательно чтобы вы ее записали полностью, от начала до конца партии, если вы ее прервете, то статистика игры не будет записана, так как она приходит с сервера в конце партии.<br>
+
+</div>
+
+<div ID="BINDINGS" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>BINDINGZ</font></b><br>
+C версии 031 переназначить управление можно через player properties+customize controlz<br><br>
+
+УЧТИТЕ: что нельзя биндить сериями команд (например bind space "fire; nextweapon; kill")
+Чтобы набиндить кнопку нужно написать: <Br><i>bind {key} {action}</i><br>Ниже описано каким может быть параметр {key}
+<i><br><font color=lime>
+A,B,C,D....Z<br>
+1,2,3..0<br>
+shift, ctrl, alt, tab, space, capslock, num0, num1, num2, num3, num4, num5, num6, num7, num8, num9, num0,
+num/, num*, num-, num+, num., enter, insert, home, pgup, pgdown, delete, end, backspace, leftarrow, rightarrow, uparrow, downarrow,<br>
+mbutton1,mbutton2,mbutton3</font> - кнопки мыши.</i><br>
+Ниже описано каким может быть параметр {action}: <br></i><font color=lime>
+moveleft, moveright, moveup, movedown, nextweapon, prevweapon, lookup, lookdown, fire, center, weapon0, weapon1, weapon2, weapon3, weapon4, weapon5, weapon6, weapon7, weapon8, p2moveleft, p2moveright, p2moveup, p2fire, p2nextweapon, p2prevweapon, p2lookup, p2lookdown, p2center, p2weapon0, p2weapon1, p2weapon2, p2weapon3, p2weapon4, p2weapon5, p2weapon6, p2weapon7, p2weapon8, scoreboard.<br></font></i><br>
+Пример как биндить:<br>
+<i>bind leftarrow moveleft<br>
+bind a p2moveleft</i><br>
+приставка p2 значит для второго игрока. Ниже приложен пример набиндивания управления для игрока 2:<br><i>
+bind 1 p2weapon2<br>
+bind e p2weapon3<br>
+bind r p2weapon4<br>
+bind alt p2weapon5<br>
+bind 4 p2weapon6<br>
+bind capslock p2weapon7<br>
+bind tab p2weapon1<br>
+bind k p2lookup<br>
+bind h p2lookdown<br>
+bind j p2fire<br>
+bind w p2moveup<br>
+bind s p2moveup<br>
+bind a p2moveleft<br>
+bind d p2moveright<br></i>
+NOTE: Чтобы забинденные значения <font color=lime>lookup, lookdown</font> работали то надо на консоли набрать "mouselook 0", и тогда смотрение игрока 1 будет на забинденных кнопках со значениями <font color=lime>lookup, lookdown</font>.<br><br>
+Чтобы биндить мышь надо "bind mbutton1 fire" "bind mbutton2 weapon6" итд.<br>Бинд "Center" центрует оружие.<br>
+Чтобы записать бинды в отдельный конфиг перенесите команды в отдельный cfg файл. И потом вызывайте его в главном меню (на консоли набрать "exec yourfilename". Yourfilename.cfg должен лежать в каталоге BaseNFK).<br>
+Если вас ломает каждый раз писать EXEC, то в каталоге basenfk создайте конфиг autoexec.cfg, а в нем напишите exec Yourfilename. И ваш конфиг будет грузиться автоматом.<br>
+<br>Консольные команды относящиеся к биндам:
+unbindkeys<br>
+p2unbindkeys<br>
+p1defaultcontrols<br>
+p2defaultcontrols<br>
+</div>
+
+<div ID="CONSOLE" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>CONSOLE COMMANDZ</font></b><br>
+Консоль вызывается кнопкой "~"<br><br>
+<font color=lime>bg</font> [1-8] - изменяет задний фон карты.<br>
+<font color=lime>crosscolor</font> [1-7] - Цвет прицела игрока 1<br>
+<font color=lime>p2crosscolor</font> [1-7] - Цвет прицела игрока 2<br>
+<font color=lime>crosstype</font> [0-4] - Вид прицела игрока 1<br>
+<font color=lime>p2crosstype</font> [0-4] - Вид прицела игрока 2<br>
+<font color=lime>fraglimit</font> [0-999] - Ограничение по фрагам<br>
+<font color=lime>timelimit</font> [0-999] - Ограничение по времени<br>
+<font color=lime>quit</font> - выход.<br>
+<font color=lime>sensitivity</font> [1-9] - cкорость мыши<br>
+<font color=lime>restart</font> [0-1] - перезагружается карта. матч начинается сначала.<br>
+<font color=lime>drawfps</font> [0-1] - показывает колво фреймов. Должно быть всегда 50. Это ограничение такое.<br>
+<font color=lime>ready</font> - начать матч<br>
+<font color=lime>map</font> - Сменить карту. например "map dm1"<br>
+<font color=lime>keybsensitivity</font> [1-9] - Скорость look'a с клавиатуры.<br>
+<font color=lime>keybaccelerate</font> [0-9] - Акселерация look'a с клавиатуры (игрока 1).<br>
+<font color=lime>p2keybaccelerate</font> [0-9] - Акселерация look'a с клавиатуры (игрока 2).<br>
+<font color=lime>warmup</font> [1-999] - Время на подготовку.<Br>
+<font color=lime>railcolor</font> [1-7] - Цвет луча рэилгана игрока 1<br>
+<font color=lime>p2railcolor</font> [1-7] - Цвет луча рэилгана игрока 2<br>
+<font color=lime>bind</font> - Назначить клавишу<br>
+<font color=lime>exec</font> - Выполнить конфиг<br>
+<font color=lime>unbindkeys</font> - отбиндивает управление 1.<br>
+<font color=lime>p2unbindkeys</font> - отбиндивает управление 2.<br>
+<font color=lime>railtrailtime</font> [1-14] - время остывания луча рэила.<br>
+<font color=lime>hitsound</font> [0-1] - при удачном попадании проигрывается звук hitsnd.wav.<br>
+<font color=lime>gibblood</font> [0-1] - кровь от мяса.<br>
+<font color=lime>disconnect</font> - выгружает карту и возвращает в меню.<br>
+<font color=lime>currenttime</font> - показывает текущее время.<br>
+<font color=lime>halfquit</font> - юзай если quitom не выходит.<br>
+<font color=lime>record</font> - начинается запись демки<br>
+<font color=lime>stoprecord</font> - заканчивается запись демки<br>
+<font color=lime>demo</font> - проигрывает дему<br>
+<font color=lime>doorsounds</font> [0-1] - звуки дверей <Br>
+<font color=lime>cameratype</font> [0-1] - тип камеры (неподвижная\за игроком).<br>
+<font color=lime>mousesmooth</font> - ограничитель скорости мыши<br>
+<font color=lime>gofullscreen</font> - на полный экран <br>
+<font color=lime>gowindow</font> - оконный режим <br>
+<font color=lime>weaponswitch_on_end</font> [0-2] - авто смена оружия игрока1.<br>
+<font color=lime>p2weaponswitch_on_end</font> [0-2] - авто смена оружия игрока2.<br>
+<font color=lime>model</font> - модель игрока 1<br>
+<font color=lime>p2model</font> - модель игрока 2<br>
+<font color=lime>allowmapschangebg</font> [0-1] - разрешить картам менять задний фон.<br>
+<font color=lime>leavearena</font> - выгружает карту и возвращает в меню.<br>
+<font color=lime>warmuparmor</font> - количество армора в разыгровке.<br>
+<font color=lime>shownick</font> [0-1] - показывать ник над игроком.<br>
+<font color=lime>autoshownick</font> [0-1] - показывать ник над игроком (автоматически).<br>
+<font color=lime>autorecord</font> - начинается запись демки (имя демки придумывается за вас)<br>
+<font color=lime>mouselook</font> [0-1] - 1=игрок 1 смотрит на мыше; 0=на клаве.<br>
+<font color=lime>corpsetime</font> [0-60] - кол-во сек трупа. после этого времени он убирается.<br>
+<font color=lime>forcerespawn</font> [2-60] - макс кол-во сек на лежание трупом.<br>
+<font color=lime>weapbartime</font> [0-250] - время подсветки панели оружий игрока1.<br>
+<font color=lime>p2weapbartime</font> [0-250] - время подсветки панели оружий игрока2.<br>
+<font color=lime>sndrestart</font> - пере инициализация звука.<br>
+<font color=lime>midiplay</font> - начать проигрывать музыку. из basenfk\music\*.mid<br>
+<font color=lime>midinext</font> - следующий трэк.<br>
+<font color=lime>midistop</font> - остановить музыку.<br>
+<font color=lime>messagetime</font> [0-500] - время на показ одного сообщения.<br>
+<font color=lime>log</font> [0-1] - выключает\включает запись лог файла.<br>
+<font color=lime>noplayer</font> [0-2] - (0=2 игрока) (1=нет игрока 1) (2=нет игрока 2). Команда работает только из главного меню и только в хотсите.<br>
+<font color=lime>transparentstats</font> [0-1] - (не) прозрачная статистика.<br>
+<font color=lime>echo text</font> - выводит сообщение text.<br>
+<font color=lime>menucolor</font> [0-13] - Цвет меню, которое вызывается по кнопке ESC в игре.<br>
+<font color=lime>mp3play</font> - nfkamp: начать проигрывать mp3 из плей листа.<br>
+<font color=lime>mp3next</font> - nfkamp: следующий трэк к плэйлисте.<br>
+<font color=lime>mp3stop</font> - nfkamp: стоп.<br>
+<font color=lime>mp3reset</font> - nfkamp: стоп + перезагрузка плейлиста.<br>
+<font color=lime>mp3volume</font> - громкость музыки.<br>
+<font color=lime>volume</font> - громкость звука.<br>
+<font color=lime>speeddemo</font> [0-40] - ускорение\замедление проигрывания демки. Нормальная скорость: 20.<br>
+<font color=lime>gauntletnextweapon</font> - gauntlet есть\нет в списке nextweapon(prevweapon) игрока 1.<br>
+<font color=lime>p2gauntletnextweapon</font> - gauntlet есть\нет в списке p2nextweapon(p2prevweapon) игрока 2.<br>
+<font color=lime>trixmasta</font> - включение продвинутого режима trix arena. (подробнее в разделе TRIX ARENA).<br>
+<font color=lime>showmapinfo</font> - [не]показывать информацию о карте в начале партии.<br>
+<font color=lime>p1defaultcontrols</font> - Сбрасывает управление игрока 1 на изначальные значения.<br>
+<font color=lime>p2defaultcontrols</font> - Сбрасывает управление игрока 2 на изначальные значения.<br>
+<font color=lime>railarenainstagib</font> [0-1] - режим instagib в railarena.<Br>
+<font color=lime>r_transparentbulletmarks</font> [0-1] - Прозрачные отпечатки на стенах от machine gun, shotgun.<Br>
+<font color=lime>r_flashingitems</font> [0-1] - Аптечки и поверапы плавно меняют яркость.<br>
+<font color=lime>r_alphaitemsrespawn</font> [0-1] - При респавне предметы плавно появляются из ниоткуда.<Br>
+<font color=lime>r_transparentexplosions</font> [0-1] - Прозрачные взрывы.<Br>
+<font color=lime>r_railprogressivealpha</font> [0-1] - Короче настройка рэила, объяснять долго. Зависит от railtrailtime, как по симпатичней будет так и оставьте.<br>
+<font color=lime>r_railsmooth</font> [0-1] - смазанный рэил.<Br>
+<font color=lime>r_wateralpha</font> [25-255] - степень прозрачности воды\лавы.<Br>
+<font color=lime>r_drawbubbles</font> [0-1] - отрисовка пузырей, при плавании.<Br> 
+<font color=lime>r_statusbaralpha</font> [0-255] - степень прозрачности статус бара.<Br> 
+<font color=lime>shownickatsb</font> - Показывать ники над статусбарами.<Br>
+<font color=lime>spectator</font> [0-1] - Вводится в меню, перед подсоединением к серверу, при значении 1 вы становитесь спектатором (наблюдателем).<Br>
+<font color=lime>traffic</font> - показывает входящий\исходящий траффик.<br>
+<font color=lime>getplayersid</font> - выводит ID игроков.<br>
+<font color=lime>kickplayer</font> [ID] - Выпинывает игрока с сервера (нужно указать ID игрока).<br>
+<font color=lime>sync</font> [1-3] - степень синхронизации между клиентом\сервером. на лане ставьте 1 (сильная). 2-средняя. 3-слабая.<br>
+<font color=lime>m_invert</font> [0-1] - реверс мыши<Br>
+<font color=lime>m_rotated</font> [0-1] - чтобы смотреть нужно крутить мышь не вверх\вниз а влево\вправо.<br>
+<font color=lime>m_accelerate</font> [0-15] - акселерация мыши<Br>
+<font color=lime>net_coordinterpolate</font> [0-100] - степень сглаживания координат (во избежании "лагания" игроков). (по мультиплееру).<Br>
+<font color=lime>enemymodel</font> - замена моделей врагов на указанную. (вводится в меню)<br>
+<font color=lime>ipaddress</font> - показывает локальный IP Address.<br>
+<font color=lime>sv_allowjoinmatch</font> [0-1] - 1-Разрешает присоединяться к серверу в любое время; 0-только  в вармапе.<br>
+<font color=lime>sv_dedicated</font> [0-1] - сервер без серверных игроков<Br>
+<font color=lime>sv_hostname</font> - хост нэйм.<Br>
+<font color=lime>nextplayer</font> - в демке или в режиме спектатора слежение переходит за следующим игроком.<br>
+<font color=lime>bar2assign</font> [ID] - только в демке. назначает 2ой статус бар указанному игроку (нужно указать ID игрока).<br>
+<font color=lime>drawfragbar</font> - панелька с фрагами. только по мультиплееру.<Br>
+<font color=lime>fragbarx</font> - позиция X панельки с фрагами.<Br>
+<font color=lime>fragbary</font> - позиция Y панельки с фрагами.<Br>
+<font color=lime>sv_lock</font> - Запрещает изменение команд "timelimit, fraglimit, forcerespawn, railarenainstagib, sync, sv_teamdamage, sv_overtime". Снять lock можно только если закрыть сервер.<Br> 
+<font color=lime>sv_overtime</font> [0-30] - Количество добавочных минут при ничьей в режиме игры teamplay.<Br>
+<font color=lime>sv_teamdamage</font> [0-1] - (не) ранить своих тиммэйтеров.<Br>
+<font color=lime>zoomwindow</font> - растяжение экрана до размеров десктопа (в оконном режиме)<Br>
+<font color=lime>join red</font> - присоединиться к красной команде. (teamplay only)<Br>
+<font color=lime>join blue</font> - присоединиться к синей команде. (teamplay only)<Br>
+<font color=lime>join auto</font> - нфк сам выбирает вам команду. (teamplay only)<Br>
+
+
+<font color=lime>announcer</font> [0-1]: комментатор текущего счета , говорит "youre lost the lead" или "teams for tied" итд.<Br>
+<font color=lime>teammodel</font> [model+skin]: назначает вашим тиммэйтерам выбранную модель.<Br>
+<font color=lime>cl_avidemo</font> (number): последовательно сохраняет скриншоты в basenfk\. с именем 0001.jpg. Если указан параметр (number) то файлы будут создаваться начиная с (number), например "cl_avidemo 1000", или "cl_avidemo" (с 0).<Br>
+<font color=lime>sv_testplayer2</font>: мультиплеерная команда. На сервере создается второй игрок. Его управление от player2 в hotseat.<Br>
+<font color=lime>r_bgmotion</font> [0-1]: Бэкграунд движется не синхронно с картой (пространственный эффект). Только на больших картах).<Br>
+<font color=lime>r_railstyle</font> [0-4]: Стиль луча рэилгана.<Br>
+<font color=lime>fill_bgr</font> [$AABBCC]: Заливка заднего фона, (при "drawbackground 0"). Где AA=синий. BB-зеленый. CC-красный. Например: "fill_bgr $0000FF" - заливка красным цветом. (значения в шестнадцатеричной системе)<Br>
+<font color=lime>ch_conspeed</font> [1-480]: Cкорость выдвижения консоли.<Br>
+<font color=lime>ch_conheight</font> [64-480]: высота консоли (максимальное расстояние на которое может выдвинуться консоль).<Br>
+<font color=lime>ch_conalpha</font> [1-255]: Степень прозрачности консоли.<Br>
+<font color=lime>ch_constretch</font> [0-1]: Растяжение бэкграунда консоли. (только при подключенной 040_CUSTOM_GRAFIX)<Br>
+<font color=lime>clear</font> : Очищает консоль от всех надписей.<Br>
+<font color=lime>capturelimit</font> : Лимит захватов флага (CTF Only)<Br>
+<font color=lime>domlimit</font> : Лимит очков в режиме игры Domination.<Br>
+<font color=lime>hidep2statusbar</font> : Убирает статусбар игрока2.<Br>
+<font color=lime>r_markemptydeath</font> [0-1]: Делает death и empty брики видимыми.<Br>
+<font color=lime>r_fx_smoke</font> [0-1]: Спец эффект: новый дым<Br>
+<font color=lime>r_fx_rlbfg</font> [0-1]: Спец эффект: свет от ракет, bfg.<Br>
+<font color=lime>r_fx_plasma</font> [0-1]: Спец эффект: новая плазма.<Br>
+<font color=lime>r_fx_quad</font> [0-1]: Спец эффект: свет от quad (player). <Br>
+<font color=lime>r_fx_explo</font> [0-1]: Спец эффект: свет при взрывах (ракет, гранат, bfg).<Br>
+<font color=lime>cmdlist</font> : Выводит список всех консольных команд.<Br>
+<font color=lime>say_team</font> [text]: отправить чат только своим по команде (multiplayer team game only)<Br>
+<font color=lime>ch_dombarpos</font>: Позиция DOMBAR (панель отображающая статус игры Domination) по оси Y<Br>
+<font color=lime>ch_dombarstyle</font> [0-3]: Внешний вид DOMBAR.<Br>
+<font color=lime>randommodels</font> : Всем игрокам ставит рандомные модели (из доступных).<Br>
+<font color=lime>ch_teambar_showmyself</font> [0-1] - показывать себя в TEAMBAR..<Br>
+<font color=lime>ch_teambar_color</font> [0-13] - цвет TEAMBAR<Br>
+<font color=lime>ch_teambar_style</font> [0-3] - стиль TEAMBAR.<Br>
+<font color=lime>cl_avimode</font> [0-1]: 0 - cl_avidemo записывает в jpg. 1 - cl_avidemo записывает в bmp.<Br>
+<font color=lime>writeconfig</font>: "writeconfig myconfig", в файл myconfig.cfg будут записаны текущие настройки нфк.<Br>
+<font color=lime>nextwpn_skipempty</font> [0-1]: при выборе оружия, через nextweapon и prevweapon, не будут выбираться оружия без патронов.<Br>
+<font color=lime>p2nextwpn_skipempty</font> [0-1]: тоже самое, только для игрока2.<Br>
+<font color=lime>ch_showrecordinglabel</font> [0-1]: (не) показывать вверху экрана надпись "recording xxxx.ndm", в случае записи демки.<Br>
+<font color=lime>connect</font> xx.xx.xx.xx: нфк присоединяется в созданную игру по ип xx.xx.xx.xx<br>
+<font color=lime>sv_maxplayers</font> [2-8]: Максимальное количество игроков, которые могут играть на этом сервере.<br>
+<font color=lime>net_guaranteed</font> [0-1]: Контроль потери пакетов (packet lost). Рекомендуется держать всегда включенным.<br>
+<font color=lime>net_predict</font> [0-1]: Предугадывание позиции игрока основываясь на пинге. Рекомендуется включать, особенно на выделенных серверах.<br>
+<font color=lime>minimize</font> : Минимизирует нфк.<br>
+<font color=lime>ipinvite</font> xx.xx.xx.xx: Кидает приглашение в игру по указанному IP адресу. Полезно если соединение устанавливается только в одну сторону.<br>
+<font color=lime>callvote</font> consolecommand: Голосование. Можно выдвигать на голование выбранную консольную команду, по проценту проголосовавших ЗА, выбирается, будет ли применена команда. <br>
+<font color=lime>net_showbandwidth</font> [0-1]: Показывает прокачку (загруженность канала). bytes \ sec.<br>
+<font color=lime>vote</font> [yes/no]: Голос ЗА или ПРОТИВ, при активном голосовании.<br>
+<font color=lime>sv_allowvote</font> [0-1]: На сервере разрешено голосование.<br>
+<font color=lime>sv_vote_percent</font> [1-100]: Голосование принимается если процент проголосовавших больше чем sv_vote_percent%<br>
+<font color=lime>sv_allowvote_restart</font> [0-1]: На сервере разрешено голосование за "restart".<br>
+<font color=lime>sv_allowvote_fraglimit</font> [0-1]: На сервере разрешено голосование за "fraglimit".<br>
+<font color=lime>sv_allowvote_timelimit</font> [0-1]: На сервере разрешено голосование за "timelimit".<br>
+<font color=lime>sv_allowvote_capturelimit</font> [0-1]: На сервере разрешено голосование за "capturelimit".<br>
+<font color=lime>sv_allowvote_domlimit</font> [0-1]: На сервере разрешено голосование за "domlimit".<br>
+<font color=lime>sv_allowvote_ready</font> [0-1]: На сервере разрешено голосование за "map".<br>
+<font color=lime>sv_allowvote_map</font> [0-1]: На сервере разрешено голосование за "restart".<br>
+<font color=lime>sv_allowvote_warmup</font> [0-1]: На сервере разрешено голосование за "warmup".<br>
+<font color=lime>sv_allowvote_warmuparmor</font> [0-1]: На сервере разрешено голосование за "warmuparmor".<br>
+<font color=lime>sv_allowvote_forcerespawn</font> [0-1]: На сервере разрешено голосование за "forcerespawn".<br>
+<font color=lime>sv_allowvote_sync</font> [0-1]: На сервере разрешено голосование за "sync".<br>
+<font color=lime>sv_allowvote_sv_teamdamage</font> [0-1]: На сервере разрешено голосование за "sv_teamdamage".<br>
+<font color=lime>sv_allowvote_net_predict</font> [0-1]: На сервере разрешено голосование за "net_predict".<br>
+<font color=lime>sv_allowvote_sv_maxplayers</font> [0-1]: На сервере разрешено голосование за "sv_maxplayers".<br>
+<br>Если ввести команду без значения, то будет показано ее текущее значение.<br><br>
+</div>
+
+<div ID="objects" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>ITEMZ & REWARDZ</font></b><br>
+<table border=0 cellpadding=2 cellspacing=1 align=center>
+<tr bgcolor="#000044" align="center"><td width=33%>Оружие</td>
+<td width=33%>Название</td>
+<td width=33%>ДМГ</td>
+</tr>
+<tr align="center">
+<td><img src="img/gauntl.gif"></td>
+<td>Gauntlet</td>
+<td>дмг: 35.</td>
+</tr><tr align="center">
+<td><img src="img/machinegun.gif"></td>
+<td>Machine Gun</td>
+<td>дмг: 5.</td>
+</tr><tr align="center"><td><img src="img/shotgun.gif"></td>
+<td>Shotgun</td>
+<td>дмг: 7-75.</td>
+</tr><tr align="center"><td><img src="img/grenade.gif"></td>
+<td>Grenade Launcher</td>
+<td>дмг: 65.</td>
+</tr><tr align="center"><td><img src="img/rocket.gif"></td>
+<td>Rocket Launcher</td>
+<td>дмг: 80-100.</td>
+</tr><tr align="center"><td><img src="img/shaft.gif"></td>
+<td>Lightning gun (Shaft)</td>
+<td>дмг: 2-3.</td>
+</tr><tr align="center"><td><img src="img/rail.gif"></td>
+<td>Railgun</td>
+<td>дмг: 75.</td>
+</tr><tr align="center"><td><img src="img/plasma.gif"></td>
+<td>Plasma gun</td>
+<td>дмг: 14.</td>
+</tr><tr align="center"><td><img src="img/bfg.gif"></td>
+<td>BFG</td>
+<td>дмг: 80-100.</td>
+</tr><tr bgcolor="#000044" align="center"><td width=33%>Патроны</td>
+<td width=33%>Название</td>
+<td width=33%>Описание</td>
+</tr><tr align="center"><td><img src="img/machinea.gif"></td>
+<td>Bullets</td>
+<td>Патроны к Machinegun.</td>
+</tr><tr align="center"><td><img src="img/shotguna.gif"></td>
+<td>Shells</td>
+<td>Патроны к Shotgun.</td>
+</tr><tr align="center"><td><img src="img/grenadea.gif"></td>
+<td>Grenades</td>
+<td>Патроны к Grenade Launcher.</td>
+</tr><tr align="center"><td><img src="img/rocketa.gif"></td>
+<td>Rockets</td>
+<td>Патроны к Rocket Launcher.</td>
+</tr><tr align="center"><td><img src="img/shafta.gif"></td>
+<td>Lightnings</td>
+<td>Патроны к Lightning gun.</td>
+</tr><tr align="center"><td><img src="img/raila.gif"></td>
+<td>Slugs</td>
+<td>Патроны к Rail gun.</td>
+</tr><tr align="center"><td><img src="img/plasmaa.gif"></td>
+<td>Cells</td>
+<td>Патроны к Plasma gun.</td>
+</tr><tr align="center"><td><img src="img/bfga.gif"></td>
+<td>BFG ammo</td>
+<td>Патроны к BFG.</td>
+</tr><tr bgcolor="#000044" align="center"><td width=33%>Аптечки</td>
+<td width=33%>Название</td>
+<td width=33%>Описание</td>
+</tr><tr align="center"><td><img src="img/med5.gif"></td>
+<td>Medikit +5</td>
+<td>Добавляет 5 хелса.</td>
+</tr><tr align="center"><td><img src="img/med25.gif"></td>
+<td>Medikit +25</td>
+<td>Добавляет 25 хелса.</td>
+</tr><tr align="center"><td><img src="img/med50.gif"></td>
+<td>Medikit +50</td>
+<td>Добавляет 50 хелса.</td>
+</tr><tr align="center"><td><img src="img/med100.gif"></td>
+<td>Medikit +100</td>
+<td>Добавляет 100 хелса.</td>
+</tr><tr bgcolor="#000044" align="center"><td width=33%>Броня</td>
+<td width=33%>Название</td>
+<td width=33%>Описание</td>
+</tr><tr align="center"><td><img src="img/shard.gif"></td>
+<td>Shard</td>
+<td>Добавляет 5 брони.</td>
+</tr><tr align="center"><td><img src="img/yellowarmor.gif"></td>
+<td>Yellow Armor</td>
+<td>Добавляет 50 брони.</td>
+</tr><tr align="center"><td><img src="img/redarmor.gif"></td>
+<td>Red Armor</td>
+<td>Добавляет 100 брони.</td>
+</tr><tr bgcolor="#000044" align="center"><td width=33%>Артефакты</td>
+<td width=33%>Название</td>
+<td width=33%>Описание</td>
+</tr><tr align="center"><td><img src="img/fly.gif"></td>
+<td>Fly</td>
+<td>Дает возможность летать</td>
+</tr><tr align="center"><td><img src="img/haste.gif"></td>
+<td>Haste</td>
+<td>Ускоряет скорость стрельбы и бега</td>
+</tr><tr align="center"><td><img src="img/battle.gif"></td>
+<td>Battle Suit</td>
+<td>Принимаемые повреждение уменьшаются в два раза</td>
+</tr><tr align="center"><td><img src="img/regen.gif"></td>
+<td>Regeneration</td>
+<td>Регенирирует 5 жизни в одну секунду</td>
+</tr><tr align="center"><td><img src="img/quad.gif"></td>
+<td>Quad Damage</td>
+<td>Увеличивает наносимое повреждение в 3 раза</td>
+</tr><tr align="center"><td><img src="img/invis.gif"></td>
+<td>Invisibility</td>
+<td>Невидимость (только по мультиплееру)</td>
+
+</tr><tr bgcolor="#000044" align="center"><td width=33%>Награды</td>
+<td width=33%>Название</td>
+<td width=33%>Описание</td>
+</tr><tr align="center"><td><img src="img/impressive.gif"></td>
+<td>Impressive</td>
+<td>Дается за 3 подряд попадания из рэйлгана</td>
+</tr><tr align="center"><td><img src="img/excellent.gif"></td>
+<td>Excellent</td>
+<td>Дается, если в 2.5 секунды было сделано больше чем 1 фраг</td>
+</tr><tr align="center"><td><img src="img/humiliation.gif"></td>
+<td>Humiliation</td>
+<td>Дается за убийство из gauntlet'a</td>
+</tr>
+</table>
+</div>
+
+<div ID="nfkamp" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>NFKAMP - MP3 Player</font></b><br>
+NFK AMP - Это mp3 проигрыватель, встроенный в NFK. Для проигрывания mp3 музыки вам сначала надо создать плейлист. Плейлист это файл basenfk\music\mp3list.dat. В котором указанны полные пути к mp3 файлам. Для удобного создания плей листа есть программа "playlist generator for NFKAMP", находится она в basenfk\music\nfkamp.exe <Br>
+Управляется nfk amp следующими командами:<br>
+<font color=lime>mp3play</font> - nfkamp: начать проигрывать mp3 из плей листа.<br>
+<font color=lime>mp3next</font> - nfkamp: следующий трэк к плэйлисте.<br>
+<font color=lime>mp3stop</font> - nfkamp: стоп.<br>
+<font color=lime>mp3reset</font> - nfkamp: стоп + перезагрузка плейлиста.<br>
+<font color=lime>mp3volume</font> - nfkamp: громкость музыки.<br>
+</div>
+
+<div ID="BUGZ" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>TROUBLESHOOTING</font></b><br>
+Если у вас появляются подозрительные глюки то удалите файл nfkconfig.cfg в каталоге basenfk и запустите игру.<br>
+<b>Встречающиеся проблемы:</b><br>
+- Если у вас ничего не пишется на консоли - переключитесь на английский шрифт.<br>
+- иногда нфк не возвращается из альт+таба. Попробуйте подольше, покликайте на таскбар.<br>
+<br>
+<B>Если нфк не запускается:</b><br>
+- Возможно у вас pentium<=200.<br>
+- Игра требует минимум DirectX8.1.<br>
+- У вас не поддерживается режим Direct3d8.<br>
+- Отсутствуют некоторые файлы из оригинальной поставки.<br>
+- Путь к каталогу где лежит нфк содержит русские буквы или пробелы.<br>
+<br>
+<b>Если нфк запустился, но не стартует карту.</b><br>
+- Карта которую пытаетесь загрузить, является картой старого формата. Ее надо конвертировать через nfkradiant.<br>
+- Отсутствуют некоторые файлы из оригинальной поставки.<br>
+<br><br>
+
+Чтобы увеличить FPS попробуйте запустить NFK в 16-битном режиме.<br><br>
+
+FAQ и более полный TROUBLESHOOTING вы можете найти на http://powersite.narod.ru в соответствующих разделах. Если вам ничего не помогло, или у вас проблема, которая не описана здесь, то посетите FAQ.
+<br>
+
+<br><font color=White size=5 face=impact><B>COMMAND LINE PARAMETERZ</font></b><br>
+Параметры командной строки вводятся следующим образом: "nfk.exe parameter1" или "nfk.exe parameter1 parameter2 parameter3".<br><br>
+
+Параметры:<br>
+"lowbitdepth" - запуск в 16 битном режиме.<br>
+"nosound" - запуск без звука.<br>
+"protected" - запуск в "защищенном" режиме, отключено большинство функций.<br>
+"gowindow" - запуск в оконном режиме.<br>
+<br>
+Пример: "nfk.exe gowindow nosound".<br>
+</div>
+
+<div ID="helpa" style="visibility: hidden; position: absolute; top: 30px;">
+<font color=White size=5 face=impact><B>About Help File</font></b><br>
+This help file created by:<br><br>
+<b>
+3d[Power]<br>
+Baxxter<br>
+DJ Dimps<br>
+КАСПЕР<br>
+KAP^COH<br>
+</b>
+<br><br>
+</div>
+
+</TR></TD>
+</BODY>
+</HTML>

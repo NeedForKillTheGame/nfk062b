@@ -1,0 +1,112 @@
+<html>
+<head><title> NFK help file</title>
+<body bgcolor=#000033 text=ghostwhite>
+</body><hr size=1 color=red><center><font face=impact><i><h1><B>NFK RADIANT</H1> </b> </i>version 035a<br></font>need for kill map editor</center>
+<hr size=1 color=red><br>
+<font color=White size=5 face=impact><B>BASIC INFO</font></b><br>
+<hr size=1 color=red><br>
+Чтобы начать делать карту надo "menu+file+new map" выбрать. Вся карта делится на брики (кирпичи). Слева вверху висит ящик такой - это палитра brush (короче кирпичи и предметы здесь разные лежат). Чтобы поставить кирпич, надо его выбрать в палитре и нажать пробел, shift - удаление. И он установится в текущее положение курсора. Аналогично ставятся предметы.<br>Свойства карты вы можете указать в "menu+configure+map properties". При создании своей карты не забудьте края карты уложить каким-нибудь кирпичом (чтобы игрок не вылетал за пределы). На карте должно присутствовать минимум 2 респавна.
+<hr size=1 color=red><br>
+<font color=White size=5 face=impact><B>SPECIAL OBJECTS - BASIC INFO</font></b><br>
+C версии 030 в нфк есть специальные объекты. Их всего 9. Справа снизу есть панель спец объектов, все действия с объектами производятся оттуда. Чтобы создать объект, нажмите кнопку "New Obj". И выберите нужный объект. Чтобы начать редактирование объекта нажмите кнопку "Select" и выберите нужный объект. Все объекты имеют порядковые номера, и обозначаются вот так "#". По этому номеру вы легко сможете найти нужный вам объект. Чтобы удалить его нужно объект сначала выбрать а потом нажать "Delete". После выбора объекта в таблицу будут занесены его свойства, там вы можете редактировать эти свойства. По завершению редактирования, нажмите "APPLY".
+<hr size=1 color=red><br>
+<font color=White size=5 face=impact><B>SPECIAL OBJECTS - PROPERTIES</font></b><br>
+<font color=white><b>TELEPORT (Портал)</b></font><br>
+<font color=lime>pos_x</font> - позиция по X.<br>
+<font color=lime>pos_y</font> - позиция по Y.<br>
+<font color=lime>goto_x</font> - телепортировать в X=.<br>
+<font color=lime>goto_y</font> - телепортировать в Y=.<br><br>
+
+<font color=white><b>BUTTON (Кнопка)</b></font><br>
+<font color=lime>pos_x</font> - позиция по X.<br>
+<font color=lime>pos_y</font> - позиция по Y.<br>
+<font color=lime>color</font> - цвет кнопки в активированном состоянии. 0=зеленая, 1=красная.<br>
+<font color=lime>wait</font> - столько ждать при активации. Время измеряется в условных единицах времени. wait 50 = 1 сек, wait 100 = 2 сек.<br>
+<font color=lime>target</font> - цель кнопки. (какой объект нужно активировать). если target=1, то у объекта, который нужно активировать, targetname тоже должен быть 1.<br>
+<font color=lime>shootable</font> - [0\1], запретить\разрешить активацию от выстрелов.<br><br>
+
+<font color=white><b>DOOR (Дверь)</b></font><br>
+<font color=lime>pos_x</font> - позиция по X.<br>
+<font color=lime>pos_y</font> - позиция по Y.<br>
+<font color=lime>orientation</font> - расположение двери. 0=Закрытая, горизонтальная; 1=Закрытая, вертикальная; 2=Открытая, горизонтальная; 3=Открытая, вертикальная.<br>
+<font color=lime>wait</font> - столько ждать при активации. Время измеряется в условных единицах времени. wait 50 = 1 сек, wait 100 = 2 сек.<br>
+<font color=lime>targetname</font> - название собственной цели. У объекта, который собирается активировать эту дверь, должен target стоять такой же как у этой двери targetname.<br>
+<font color=lime>lenght</font> - длина двери (в бриках).<br>
+<font color=lime>fastclose</font> - если дверь хочет закрыться, но игрок блокирует пространство, то дверь ждет еще wait времени, при fastclose=1, дверь закрывается сразу же, как игрок ушел с занятого места.<br><br>
+
+<font color=white><b>TRIGGER (Регион)</b></font><br>
+<font color=lime>pos_x</font> - позиция по X.<br>
+<font color=lime>pos_y</font> - позиция по Y.<br>
+<font color=lime>lenght_x</font> - длина по X (в бриках).<br>
+<font color=lime>lenght_y</font> - длина по Y (в бриках)<br>
+<font color=lime>wait</font> - время обновления тригерра (если сомневаетесь оставьте 10). Время измеряется в условных единицах времени. wait 50 = 1 сек, wait 100 = 2 сек.<br>
+<font color=lime>target</font> - цель триггера. (какой объект нужно активировать). если target=1, то у объекта, который нужно активировать, targetname тоже должен быть 1.<br><Br>
+
+<font color=white><b>AREA_PUSH (Регион толкания)</b></font><br>
+<font color=lime>pos_x</font> - позиция по X.<br>
+<font color=lime>pos_y</font> - позиция по Y.<br>
+<font color=lime>lenght_x</font> - длина по X (в бриках).<br>
+<font color=lime>lenght_y</font> - длина по Y (в бриках)<br>
+<font color=lime>wait</font> - время обновления тригерра (если сомневаетесь оставьте 10). Время измеряется в условных единицах времени. wait 50 = 1 сек, wait 100 = 2 сек.<br>
+<font color=lime>target</font> - цель. В данном случае area_push может быть совсем без target.<br>
+<font color=lime>direction</font> - направление толкания. 0=влево, 1=вверх, 2=вправо, 3=вниз.<br>
+<font color=lime>pushspeed</font> - каждое wait время area_push толкает игроков со скоростью pushspeed.<br><br>
+
+<font color=white><b>AREA_PAIN (Регион боли)</b></font><br>
+<font color=lime>pos_x</font> - позиция по X.<br>
+<font color=lime>pos_y</font> - позиция по Y.<br>
+<font color=lime>lenght_x</font> - длина по X (в бриках).<br>
+<font color=lime>lenght_y</font> - длина по Y (в бриках).<br>
+<font color=lime>dmginterval</font> - интервал нанесения повреждения. Время измеряется в условных единицах времени. wait 50 = 1 сек, wait 100 = 2 сек.<br>
+<font color=lime>dmg</font> - столько повреждения area_pain будет наносить каждое dmginterval время.<br>
+Если у area_pain targetname=0 то area_pain работает в 1ом режиме, иначе он работает во 2ом режиме.<br>
+1ый режим: наносит dmg повреждения каждое dmginterval время.<br>
+2ый режим: не наносит никакого dmg, пока не будет активирован. После активации в течении wait времени наносит dmg повреждениe каждое dmginterval время.<br>
+<font color=lime>wait</font> - время "работы" area_pain. Время измеряется в условных единицах времени. wait 50 = 1 сек, wait 100 = 2 сек.<br><br>
+
+<font color=white><b>AREA_TRIXARENA_END (Регион конца уровня (в trix arene))</b></font><br>
+<font color=lime>pos_x</font> - позиция по X.<br>
+<font color=lime>pos_y</font> - позиция по Y.<br>
+<font color=lime>lenght_x</font> - длина по X (в бриках).<br>
+<font color=lime>lenght_y</font> - длина по Y (в бриках).<br>
+Когда сюда заходит игрок, то заканчивается игра и останавливается демка. На консоль выводится время затраченное  на уровень.
+<br><br>
+
+<font color=white><b>AREA_TELEPORT (Регион телепортирования)</b></font><br>
+<font color=lime>pos_x</font> - позиция по X.<br>
+<font color=lime>pos_y</font> - позиция по Y.<br>
+<font color=lime>lenght_x</font> - длина по X (в бриках).<br>
+<font color=lime>lenght_y</font> - длина по Y (в бриках).<br>
+<font color=lime>goto_x</font> - телепортировать в X=.<br>
+<font color=lime>goto_y</font> - телепортировать в Y=.<br><br>
+
+<font color=white><b>DOORTRIGGER (Регион для открывания двери выстрелом)</b></font><br>
+<font color=lime>pos_x</font> - позиция по X.<br>
+<font color=lime>pos_y</font> - позиция по Y.<br>
+<font color=lime>orientation</font> - направление триггера. ставится параллельно двери.<br>
+<font color=lime>target</font> - цель<br>
+<font color=lime>lenght</font> - длина (в бриках).<br>
+При выстреле активируется объект с targetname равное target. Прикосновением doortrigger не активируется.<br>
+<font color=red>Учтите что doortrigger НЕ может быть внутри двери!</font> Как правильно установить doortrigger смотрите в "map_ed\tutorialmaps\doortrigger.mapa"<br><br>
+
+<font color=white><b>AREA_WATERILLUSION (Заплатка для воды. Чтобы ложить предметы под водой)</b></font><br>
+<font color=lime>pos_x</font> - позиция по X.<br>
+<font color=lime>pos_y</font> - позиция по Y.<br>
+<font color=lime>lenght_x</font> - длина по X (в бриках).<br>
+<font color=lime>lenght_y</font> - длина по Y (в бриках).<br>
+Как правильно установить area_waterillusion смотрите в "tutorialmaps\waterillusion.mapa"<br>
+<br>
+
+<hr size=1 color=red><br><br>
+
+<font color=White size=5 face=impact><B>MISC</font></b><br>
+* Уже нанесенный brush можно выбрать кликнув правой кнопкой<br>
+* Выбрать объект можно кликнув правой кнопкой на левом верхнем углу объекта<br>
+* Скроллировать карту можно кнопками WSAD.<br>
+* Стрелки курсора скроллируют brush. TAB+Стрелки курсора быстро скроллируют brush.<br>
+* Загрузить карту из nfkbeta025 можно через "menu+conventer+load old beta025 map".<br>
+* Редактировать свойство объекта можно дабл кликом или enter'ом.<Br>
+* Карты сохранять и загружать надо из basenfk\maps\<br>
+<hr size=1 color=red><br>
+
+</html>

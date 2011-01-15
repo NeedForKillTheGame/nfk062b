@@ -1,0 +1,188 @@
+<html>
+<head><title> NFK help file</title>
+<body bgcolor=#000033 text=ghostwhite>
+</body>Хэлп небыло времени делать, так что пока это просто склад мусора. Но прочитать советую.<hr size=1 color=red><center><font face=impact><i><h1><B><font color=red>N</font>EED <font color=red>F</font>OR <font color=red>K</font>ILL</h1></font></b></i>v0.30<br>Created by 3d[Power]</center><a href="http://powersite.narod.ru">visit homepage</a><hr size=1 color=red><br>
+<font color=White size=5 face=impact><B>HOW TO START</font></b><br>
+Ну собсна пока начать мона только с Hotseat'a (мультиплеера пока нет). В общем "окно хотсит": <Br>
+Слева список карт(выбираются они курсором (стрелка вниз, стрелка вверх)). Справа вы видите настройки игры. Там можно изменить свойства игроков. <br>1ый игрок играет на мышке. 2ой игрок играет на клавиатуре. Клаву можно перебиндить, и кнопки мыши.<br>В настройки матча входят 3 параметра "warmup, fraglimit,timelimit". Warmup - время на подготовку перед матчем. Fraglimit - Ограничение по фрагам. Timelimit - Ограничение по времени.<br>
+По-скольку мы обычно играем дуэль. Короче стандартные настройки для 1v1 это: warmup 180; fraglimit 0; timelimit 10. Кстати в NFK есть Sudden Death. По поводу физики читайте в разделе "Physics".<br>Когда загрузилась карта и начался отчет можно на консоли набрать команду "ready" (или нажать F10) которая начнет матч без разыгровки.
+<hr size=1 color=red><br>
+<font color=White size=5 face=impact><B>CONTROLS</font></b><br>
+Управление игрока 1:<Br>
+Левая кнопка мыши - стрелять; Взмах мыши вверх - смотреть вверх.Взмах мыши ввниз - смотреть ввниз. Скорость мыши настраивается консольной командой "sensitivity".
+Подефалту курсором можно ходить. Кнопка NUM0 менять оружие.<br>
+Управление игрока 2:<Br>
+Влево - A;<Br>
+Вправо - D;<Br>
+Вверх - W;<Br>
+Стрелять - R;<Br>
+Cледущ.оружие - Q;<Br>
+Смотреть вверх - T;<Br>
+Смотреть вних - F;<Br>
+Это конечно не особо удобное расположение кнопок, но вы можете его перебиндить. Я заметил что если хождение биндить слева клавы, а смотрение биндить в центр клавы, то зажимание кнопок значительно уменьшается. Подробнее читайте раздел "BINDINGS".
+<hr size=1 color=red><br>
+<font color=White size=5 face=impact><B>MODELS</font></b><br>
+В нфк можно играть разными моделями (внешний вид игрока). Дополнительные модели можно скачать с powersite.narod.ru<br>Выбирать модель можно через окно player properties<br>или через консольную команду "model enforcer+blue","p2model enforcer+blue".<br>Теоретически вы можете создавать свои модели. Создаются они с помощью программы NMDL которую можете тоже найти на powersite.narod.ru
+<hr size=1 color=red><br>
+
+<font color=White size=5 face=impact><B>DEMOS</font></b><br>
+В игре можно демы писать\проигрывать. Чтобы начать запись надо сначала стартануть игру (на карте). и написать команду "record mydemo1" или "autorecord". Когда матч закончится демка остановиться сама, но если вы хотите завершить запись до конца матча, то надо набрать "stoprecord". Проиграть демку можно из главного меню, в разделе DEMOS или консольной командой "demo mydemo1".
+<hr size=1 color=red><br>
+
+<font color=White size=5 face=impact><B>TRIX ARENA</font></b><br>
+Это пока единственное развлечение в сингл плеере. Суть данной фичи это прохождение уровня за наименьшее время. (карта TRIX1.MAPA и другие). На сайте powersite.narod.ru есть таблица рекордов trix arenы. Примите участие. Подробнее на powersite.narod.ru.
+<hr size=1 color=red><br>
+
+<font color=White size=5 face=impact><B>BINDINGS</font></b><br>
+УЧТИТЕ: что нельзя биндить сериями команд (например bind space "fire; nextweapon; kill"). и вообще, можно биндить только те команды которые находятся в бинд листе расположенном далее.<br><br>
+(С версии nfkbeta030 можно биндить мышь, и полностью перебиндить мышиное управление на клаву).
+По скольку я еще не сделал окно настройки управления, придется биндить через консоль. Это делается так: <Br><i>bind {key} {action}</i><br>Ниже описано каким может быть параметр {key}
+<i><br><font color=lime>
+A,B,C,D....Z<br>
+1,2,3..0<br>
+shift, ctrl, alt, tab, space, capslock, num0, num1, num2, num3, num4, num5, num6, num7, num8, num9, num0,
+num/, num*, num-, num+, num., enter, insert, home, pgup, pgdown, delete, end, backspace, leftarrow, rightarrow, uparrow, downarrow,<br>
+mbutton1,mbutton2,mbutton3</font> - кнопки мыши.</i><br>
+Ниже описано каким может быть параметр {action}: <br></i><font color=lime>
+moveleft, moveright, moveup, nextweapon, lookup, lookdown, fire, center, weapon1, weapon2, weapon3, weapon4, weapon5, weapon6, weapon7, weapon8, p2moveleft, p2moveright, p2moveup, p2fire, p2nextweapon, p2lookup, p2lookdown, p2center, p2weapon1, p2weapon2, p2weapon3, p2weapon4, p2weapon5, p2weapon6, p2weapon7, p2weapon8.<br></font></i><br>
+Пример как биндить:<br>
+<i>bind leftarrow moveleft<br>
+bind a p2moveleft</i><br>
+приставка p2 значит для второго игрока. Ниже приложен пример полного набиндивания управления для игрока 2:<br><i>
+bind 1 p2weapon2<br>
+bind e p2weapon3<br>
+bind r p2weapon4<br>
+bind alt p2weapon5<br>
+bind 4 p2weapon6<br>
+bind capslock p2weapon7<br>
+bind tab p2weapon1<br>
+bind k p2lookup<br>
+bind h p2lookdown<br>
+bind j p2fire<br>
+bind w p2moveup<br>
+bind a p2moveleft<br>
+bind d p2moveright<br></i>
+NOTE: Чтобы забинденные значения <font color=lime>lookup, lookdown</font> работали то надо на консоли набрать "mouselook 0", и тогда смотрение игрока 1 будет на забинденных кнопках со значениями <font color=lime>lookup, lookdown</font>.<br><br>
+Чтобы биндить мышь надо "bind mbutton1 fire" "bind mbutton2 moveup" итд.<br>Бинд "Center" центрует оружие.<br>
+
+Я пока не сделал чтобы бинды сохранялись при выходе так что вам лучше записать их в отдельный конфиг и потом вызывать его в главном меню (на консоли набрать "exec yourfilename". Yourfilename.cfg должен лежать в каталоге BaseNFK).<br>
+Если вас ломает каждый раз писать EXEC, то в каталоге basenfk создайте конфиг autoexec.cfg, а в нем напишите exec Yourfilename.cfg. И ваш конфиг будет грузиться автоматом.<br>
+<hr size=1 color=red><br>
+<font color=White size=5 face=impact><B>CONSOLE COMMANDS</font></b><br>
+Консоль вызывается кнопкой "~"<br>
+<font color=lime>bg</font> [1-?] - изменяет задний фон карты.<br>
+<font color=lime>crosscolor</font> [1-7] - Цвет прицела игрока 1<br>
+<font color=lime>p2crosscolor</font> [1-7] - Цвет прицела игрока 2<br>
+<font color=lime>crosstype</font> [0-4] - Вид прицела игрока 1<br>
+<font color=lime>p2crosstype</font> [0-4] - Вид прицела игрока 2<br>
+<font color=lime>fraglimit</font> [0-999] - Ограничение по фрагам<br>
+<font color=lime>timelimit</font> [0-999] - Ограничение по времени<br>
+<font color=lime>quit</font> - выход.<br>
+<font color=lime>sensitivity</font> [1-9] - cкорость мыши<br>
+<font color=lime>restart</font> [0-1] - перезагружается карта. матч начинается сначала.<br>
+<font color=lime>drawfps</font> [0-1] - показывает колво фреймов. Должно быть всегда 50. Это ограничение такое.<br>
+<font color=lime>ready</font> - начать матч<br>
+<font color=lime>simplephysics</font> [0-1] - физика нормальная/продвинутая<br>
+<font color=lime>map</font> - Сменить карту. например "map dm1"<br>
+<font color=lime>keybsensitivity</font> [1-9] - Скорость look'a с клавиатуры.<br>
+<font color=lime>keybaccelerate</font> [0-9] - Акселлерация look'a с клавиатуры (игрока 1).<br>
+<font color=lime>p2keybaccelerate</font> [0-9] - Акселлерация look'a с клавиатуры (игрока 2).<br>
+<font color=lime>warmup</font> [1-999] - Время на подготовку.<Br>
+<font color=lime>railcolor</font> [1-7] - Цвет луча рэилгана игрока 1<br>
+<font color=lime>p2railcolor</font> [1-7] - Цвет луча рэилгана игрока 2<br>
+<font color=lime>bind</font> - Назначить клавишу<br>
+<font color=lime>exec</font> - Выполнить конфиг<br>
+<font color=lime>unbindkeys</font> - отбиндивает управление 1.<br>
+<font color=lime>p2unbindkeys</font> - отбиндивает управление 2.<br>
+<font color=lime>railtrailtime</font> [1-14] - время остывания луча рэила.<br>
+<font color=lime>hitsound</font> [0-1] - при удачном попадании проигрывается звук hitsnd.wav.<br>
+<font color=lime>gibvelocity</font> [0-1] - (эта команда глючит) мясо отлетает в противоположенную попаданию сторону<br>
+<font color=lime>gibblood</font> [0-1] - кровь от мяса.<br>
+<font color=lime>disconnect</font> - выгружает карту и возвращает в меню.<br>
+<font color=lime>stats</font> - показывает статистику до конца партии.<Br>
+<font color=lime>currenttime</font> - показывает текущее время.<br>
+<font color=lime>halfquit</font> - юзай если quitom не выходит.<br>
+<font color=lime>record</font> - начинается запись демки<br>
+<font color=lime>stoprecord</font> - заканчивается запись демки<br>
+<font color=lime>demo</font> - проигрывает дему<br>
+<font color=lime>doorsounds</font> [0-1] - звуки дверей <Br>
+<font color=lime>cameratype</font> [0-1] - тип камеры (неподвижная\за игроком).<br>
+<font color=lime>mousesmooth</font> - ограничитель скорости мыши<br>
+<font color=lime>gofullscreen</font> - на полный экран <br>
+<font color=lime>gowindow</font> - оконный режим <br>
+<font color=lime>weaponswitch_on_end</font> [0-2] - автосмена оружия игрока1.<br>
+<font color=lime>p2weaponswitch_on_end</font> [0-2] - автосмена оружия игрока2.<br>
+<font color=lime>model</font> - модель игрока 1<br>
+<font color=lime>p2model</font> - модель игрока 2<br>
+<font color=lime>allowmapschangebg</font> [0-1] - разрешить картам менять задний фон.<br>
+<font color=lime>leavearena</font> - выгружает карту и возвращает в меню.<br>
+<font color=lime>warmuparmor</font> - количество армора в разыгровке.<br>
+<font color=lime>shownick</font> [0-1] - показывать ник над игроком.<br>
+<font color=lime>autoshownick</font> [0-1] - показывать ник над игроком (автоматически).<br>
+<font color=lime>autorecord</font> - начинается запись демки (имя демки придумывается за вас)<br>
+<font color=lime>mouselook</font> [0-1] - 1=игрок 1 смотрит на мыше; 0=на клаве.<br>
+<font color=lime>paredrail</font> [0-1] - 1=попадания рэила защитываются только в середину модели, голова и ноги не учитываются; 0=нормально.<br>
+<font color=lime>nfkitemspawn</font> [0-1] - 1=время респавнов предметов как в NFK, 0=как в quake3.<br>
+<font color=lime>corpsetime</font> [0-60] - кол-во сек трупа. после этого времени он убиратся.<br>
+<font color=lime>forcerespawn</font> [2-60] - макс кол-во сек на лежание трупом.<br>
+<font color=lime>weapbartime</font> [0-250] - время подсветки панели оружий игрока1.<br>
+<font color=lime>p2weapbartime</font> [0-250] - время подсветки панели оружий игрока2.<br>
+<font color=lime>sndrestart</font> - переинициализация звука.<br>
+<font color=lime>midiplay</font> - начать проигрывать музыку. из basenfk\music\*.mid<br>
+<font color=lime>midinext</font> - следующий трэк.<br>
+<font color=lime>midistop</font> - остановить музыку.<br>
+<font color=lime>messagetime</font> [0-500] - время на показ одного сообщения.<br>
+<font color=lime>log</font> [0-1] - выключает\включает запись лог файла.<br>
+<font color=lime>noplayer</font> [0-2] - (0=2 игрока) (1=нет игрока 1) (2=нет игрока 2). Команда работает только из главного меню.<br>
+<font color=lime>cachelist</font> - Показывает список кэшированных моделей.<br>
+<font color=lime>transparentstats</font> [0-1] - (не) прозрачная статистика.<br>
+<font color=lime>echo text</font> - выводит сообщение text.<br>
+Если ввести команду без значения, то будет показано ее текущее значение.<br>
+<hr size=1 color=red><br>
+<font color=White size=5 face=impact><B>BUGS</font></b><br>
+Если у вас появляются подозрительные глюки то удалите файл nfkconfig.cfg в каталоге basenfk и запустите игру.<br>
+- Помоему если алт+табнуть нфк на > 2 мин, то он виснет.<br>
+- не подрубайте слишком много звуков, а то начнутся проблемы с памятью. (если конечно для вас память это проблема). <br>
+- Гренады помоему отскакивают иногда неправильно<Br>
+- иногда можно прошафтить чувака через стену (если шафтить наискосяк через брики)<Br>
+- Не сохраняются бинды. но это только пока.<br>
+- Если у вас ничего не пишется на консоли - переключитесь на английский шрифт.<br>
+- Заметьте что при критической ошибке проигрывается звук (error.wav) и выдается сообщение об 
+ошибке на консоль. Пожалуйста если такое случится то сообщите.<br>
+- иногда нфк не возвращается из альт+таба. Попробуйте подольше, покликайте на таскбар.<br>
+<br>Если нфк не запускается:<br>
+- Возможно у вас pentium-100.<br>
+- Игра требует минимум DirectX7.<br>
+- Отсутствуют некоторые файлы из оригинальной поставки.<br>
+- Путь к каталогу где лежит нфк содержит русские буквы или пробелы.<br>
+<br>Если нфк запустился, но не стартует карту.<br>
+- Карта которую пытаетесь загрузить, является картой betanfk025. Ее надо конвертировать через nfkradiant.<br>
+- Отсутствуют некоторые файлы из оригинальной поставки.<br>
+<br>
+
+
+<hr size=1 color=red><br>
+<font color=White size=5 face=impact><B>TECH INFO</font></b><br>
+Броня предотвращает 66% дэмэйджа. Макс брони/хелса 200.<br>
+В NFK пока очень много недоделанных опций, окон, графики. Это пока временно. Кстати вы наверное заметили аптечки из q1 - это просто потому что из ку3 аптечки смотрятся отвратительно (в нфк).<br>Повреждения оружий:<br>
+Machine: 5<br>
+Shotgun: 8-75 (в зависимости от расстояния)<br>
+Grenade: 65<br>
+Rocket: 100 (в голову или ноги где-то 85-100)<br>
+Shaft: 2-3<br>
+Rail: 75<br>
+Plazma: 15<br>
+BFG: 100 (в голову или ноги где-то 85-100)<br>
+<hr size=1 color=red><br>
+<font color=White size=5 face=impact><B>LICENSE</font></b><br>
+Запрещено использовать графику из NFK для своих целей. Запрещено дизассемблирование итп. Распространение игры разрешено только в полном архиве, так как он поставляется в оригинале. Модификация архива, при распространении, запрещена.
+Проект является Freeware. Но если вы хотите проспонсировать, то всегда пожалуйста :)).
+<hr size=1 color=red><br>
+<font color=White size=5 face=impact><B>POWERSITE.NAROD.RU</font></b><br>
+:). Короче на этом сайте валяется много всякой доп фигни к нфк. Модели, карты, демы. Также на этом сайте много полезно интересного stuff'a.<br>
+<hr size=1 color=red><br>
+ps: this help suxx.
+<hr size=1 color=red><br>
+
+
+</html>

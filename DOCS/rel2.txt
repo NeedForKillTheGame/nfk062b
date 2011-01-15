@@ -1,0 +1,9 @@
+IDNFK 120 90 400 290 NFK News & Updates Delivery System
+PUSSY9
+w 140 120 ^3Welcome to NFK News & Updates Delivery
+w 140 135 ^3System
+w 140 165 ^7This internal service will bring the
+w 140 180 ^7latest news about NFK updates, and
+w 140 195 ^7any other major changes.
+w 140 225 ^7For additional information visit
+w 200 240 ^5www.3dpower.org

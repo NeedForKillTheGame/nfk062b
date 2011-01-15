@@ -1,0 +1,3 @@
+"Domination games: ≈сть несколько  контрольных точек. ÷ель - получить контроль над этими точками (пройти через них, в результате  чего их цвет помен€етс€ на цвет вашей команды) и не потер€ть его. ќчки зарабатываютс€ за каждую секунду, когда ваша команда котролирует эти точки."
+
+While you have a control of a domination point, your team gains points. The first team to reach "dominationlimit" points wins the match

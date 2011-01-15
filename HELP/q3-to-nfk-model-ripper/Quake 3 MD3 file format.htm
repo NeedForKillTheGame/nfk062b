@@ -1,0 +1,314 @@
+<html>
+<head>
+<title>Mental Vortex</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+</head>
+
+<body bgcolor="#000000" text="#999999" link="#ffffff" vlink="#ffffff" alink="#ffffff">
+<table width="530" border="0" cellspacing="0" cellpadding="0" bordercolor="#000000" height="20" hspace="5" dwcopytype="CopyTableRow">
+  <tr align="left" valign="top" nowrap bgcolor="#660000" bordercolor="#000000"> 
+    <th width="500"> 
+      <div align="center"><font color="#9999FF"><font face=Arial size="2"><b><font color="#CC6600" size="4"><font color="#FFFFFF">MD3 
+        file format specs</font></font></b></font></font></div>
+    </th>
+  </tr>
+</table>
+<table width="530" border="0" cellspacing="0" cellpadding="0" bordercolor="#000000" height="20" hspace="5" >
+  <tr bgcolor="#330000" align="left" valign="top" nowrap> 
+    <td width="530" height="243"> 
+      <blockquote> 
+        <div align="left"> 
+          <p><font face=Arial><br>
+            The file structure of the md3 files, as far as we know at this time:</font></p>
+          <p><font face=Arial size="3"><b><i><font color="#FFFF33">Last 
+            Updated October8 1999</font></i></b></font></p>
+          <p><font face=Arial> <font color="#ffffff">!!Warning!! 
+            <br>
+            This document is very technical!<br>
+            It is assumed that you, the reader, have knowledge of programming 
+            C and have basic knowledge of 3d.</font><br>
+            <br>
+            Please note that:</font></p>
+        </div>
+        <blockquote> 
+          <div align="left"> 
+            <p><font face=Arial>Char is a 8bit integer 
+              variable type<br>
+              Short is a 16bit integer variable type<br>
+              Int is a 32bit integer variable type<br>
+              Float is a 32bit floating point variable-type <br>
+              Vec2 is float[2]<br>
+              Vec3 is float[3]<br>
+              Mat3x3 is float[3][3]<br>
+              </font><font size="3" face=Arial>TexVec 
+              is a texture vector or texture u/v coordinate</font> </p>
+          </div>
+        </blockquote>
+        <div align="left"> 
+          <p><font face=Arial>First start off with the 
+            header of the md3 file.</font></p>
+          <p><font face=Arial><b>MD3_HEADER: </b></font></p>
+        </div>
+        <blockquote> 
+          <div align="left"> 
+            <pre><font color="#999900">char ID[4];         //id of file, always "IDP3" 
+int  Version;       //i suspect this is a version <br>                    //number, always 15 <br>char FileName[68];  //sometimes left Blank...
+                    //65 chars, 32bit aligned == <br>                    //68 chars 
+int  BoneFrame_num; //number of BoneFrames
+int  Tag_num;       //number of 'tags' per BoneFrame
+int  Mesh_num;      //number of meshes/skins <br>int  MaxSkin_num;   //maximum number of unique skins<br>                    //used in md3 file 
+int  HeaderLength;  //always equal to the length of <br>                    //this header <br>int  Tag_Start;     //starting position of 
+                    //tag-structures <br>int  Tag_End;       //ending position of <br>                    //tag-structures/starting<br>                    //position of mesh-structures 
+int  FileSize;      //size of file</font>     </pre>
+          </div>
+        </blockquote>
+        <div align="left"> 
+          <p><font face=Arial><b><i><font size="2">comments:</font></i></b></font><font size="2"><br>
+            <font face=Arial>If Tag_Start is the same 
+            as Tag_End then there are no tags.<br>
+            <br>
+            </font></font><font face=Arial size="2"> 
+            Tag_Num is sometimes 0, this is alright it means that there are no 
+            tags... <br>
+            i'm not sure what Tags are used for, altough there is a clear connection 
+            <br>
+            with boneframe, together they're probably used for bone based animations<br>
+            (where you rotate meshes around eachother to create animations)</font><font face=Arial size="2">.</font><br></p>
+          <p>&nbsp;</p>
+          <p><font face=Arial>After the header comes 
+            a list of tags, if available.<br>
+            </font><font face=Arial>The ammount of tags 
+            is the header variable </font><font color="#999900" face=Arial>Tag_num</font><font face=Arial> 
+            times the header variable </font><font color="#999900" face=Arial>BoneFrame_num</font><font face=Arial>.<br>
+            So it is highly probably that tags have something to do with boneframes 
+            and that objects <br>
+            can have 0 to <i>n</i> tags 'attached' to them.<br>
+            Note: We call them 'Tags' because the name in tag usually starts with 
+            &quot;tag_&quot;.</font><br></p>
+          <p><b><font face=Arial>TAG: </font></b></p>
+        </div>
+        <blockquote> 
+          <div align="left"> 
+            <pre><font color="#999900">char Name[64];    //name of 'tag' as it's usually <br>                               //called in the md3 files try to <br>                               //see it as a sub-mesh/seperate <br>                               //mesh-part. 
+                               //sometimes this 64 string may <br>                               //contain some garbage, but <br>                               //i've been told this is because
+                               //some tools leave garbage in<br>                               //those strings, but they ARE<br>                               //strings...<br>Vec3 Postition;   //relative position of tag 
+Vec3x3 Rotation;   //the direction the tag is facing relative to the rest of the model</font></pre>
+          </div>
+        </blockquote>
+        <div align="left"> 
+          <p><font face=Arial><b><i><font size="2">comments:</font></i></b></font><font size="2"><br>
+            </font><font size="2"><font face=Arial>fairly 
+            obvious i think, the name is the name of the tag.<br>
+            &quot;position&quot; is the relative position and &quot;rotation&quot; 
+            is the relative rotation to the rest of the model.</font><br></font></p>
+          </div>
+        <div align="left">
+<p><font face=Arial>After the tags come the 
+            'boneframes', frames in the bone animation.<br>
+            The number of meshframes is usually identical to this number or simply 
+            1.<br>
+            </font><font face=Arial> The header variable 
+            </font><font color="#999900" face=Arial>BoneFrame_num</font><font face=Arial> 
+            holds the ammount of BoneFrame..</font></p>
+          <p><font face=Arial><b>BONEFRAME:</b></font></p>
+        </div>
+        <div align="left"></div>
+        <blockquote> 
+          <div align="left"> 
+            <pre><font color="#999900">//unverified: 
+float  Mins[3];
+float  Maxs[3];
+float  Position[3];
+float  scale;<br>char   Creator[16]; //i think this is the <br>                    //"creator" name.. 
+                    //but i'm only guessing. 
+</font>
+    </pre>
+          </div>
+        </blockquote>
+        <div align="left"> 
+          <p><font face=Arial><b><i><font size="2">comments:</font></i></b></font><font size="2"><br>
+            </font><font size="2"><font face=Arial>Mins, 
+            Maxs, and position are very likely to be correct, scale is just a 
+            guess.<br>
+            If you divide the max</font></font><font size="2"><font face=Arial>imum 
+            and minimum xyz values of all the vertices from each meshframe you 
+            get<br>
+            the exact values as mins and maxs..<br>
+            Position is the exact center of mins and maxs, most of the time anyway.</font></font><font size="2"><br></font></p>
+          <p><font size="2"><font face=Arial>Creator 
+            is very probably just the name of the program or file of which it 
+            (the boneframe?) was created..<br>
+            sometimes it's &quot;(from ASE)&quot; sometimes it's the name of a 
+            .3ds file. <br>
+            </font></font></p>
+          <p>&nbsp;</p>
+          <p><font face=Arial>After the objects in the 
+            file are the mesh-headers.<br>
+            The header variable </font><font color="#999900" face=Arial>Mesh_num</font><font face=Arial> 
+            holds the ammount of Meshes..<br>
+            Note that a mesh consists out of the mesh-header, the skins, the triangles, 
+            the texture u/v coordinates and finally the vertices.<br>
+            Each mesh contains that data, and the next mesh will only start after 
+            the triangles, meshes etc. of the previous mesh.<br>
+            To my suprise there are .md3 files that don't have any meshes in them! 
+            This is something we need to look into.</font><font face=Arial> 
+            <br>
+            </font></p>
+          <p><font face=Arial><b>MESH:</b></font></p>
+        </div>
+        <div align="left"></div>
+        <blockquote> 
+          <div align="left"> 
+            <pre><font color="#999900">char ID[4];          //id, must be IDP3 
+char Name[68];       //name of mesh 
+                     //65 chars, <br>                     //32 bit aligned == 68 chars
+int  MeshFrame_num;  //number of meshframes 
+                     //in mesh 
+int  Skin_num;       //number of skins in mesh 
+int  Vertex_num;     //number of vertices 
+int  Triangle_num;   //number of Triangles 
+int  Triangle_Start; //starting position of 
+                     //Triangle data, relative <br>                     //to start of Mesh_Header 
+int  HeaderSize;     //size of header 
+int  TexVec_Start;   //starting position of <br>                     //texvector data, relative <br>                     //to start of Mesh_Header 
+int  Vertex_Start;   //starting position of <br>                     //vertex data,relative <br>                     //to start of Mesh_Header 
+int  MeshSize;       //size of mesh 
+             </font> </pre>
+          </div>
+        </blockquote>
+        <div align="left"> 
+          <p><font face=Arial><b><i><font size="2">comments:</font></i></b></font><font size="2"><br>
+            <font face=Arial>Meshframe_num is the number 
+            of quake1/quake2 type frames in the mesh.<br>
+            (these frames work on a morph like way, the vertices are moved from 
+            one position to another instead of rotated around eachother like in 
+            bone-based-animations) <br>
+            Skin_num is the number of skins in the md3 file..<br>
+            These skins are animated.<br>
+            Triangle_Start, TexVec_Start &amp; Vertex_Start are the number of 
+            bytes in the file from the start of the mesh header to the start of 
+            the triangle, texvec and vertex data (in that order).<br>
+            </font></font></p>
+          <p>&nbsp;</p>
+          <p><font face=Arial>After the Mesh header come 
+            the skin structures used by the mesh. </font><font face=Arial> 
+            </font><font face=Arial><br>
+            The mesh header variable </font><font color="#999900" face=Arial>Skin_num</font><font face=Arial> 
+            holds the ammount of skins..</font><font size="2" face=Arial> 
+            </font></p>
+          <p><b><font face=Arial>SKIN:</font></b></p>
+        </div>
+        <blockquote> 
+          <div align="left"> 
+            <pre><font color="#999900">char Name[68]; //name of skin used by mesh
+               //65 chars, <br>               //32 bit aligned == 68 chars             </font> </pre>
+          </div>
+        </blockquote>
+        <div align="left"> 
+          <p><font face=Arial><b><i><font size="2">comments:</font></i></b></font><font size="2"><br>
+            </font><font size="2"><font face=Arial>Name 
+            holds the name of the texture, relative to the baseq3 path.<br>
+            Q3 has a peculiar way of handling textures..<br>
+            The scripts in the /script directory in the baseq3 directory contain 
+            scripts that hold information about how some surfaces are drawn and 
+            animate (and out of how many layers it consist etc.)<br>
+            Now the strange thing is, if you remove the &quot;.tga&quot; at the 
+            end of the skin, and that name is used in the script files, than that 
+            scripted surface is used.<br>
+            If it isn't mentioned in the script files then the filename is used 
+            to load the <br>
+            tga file.</font></font></p>
+          <p><br>
+            <font face=Arial>After the Skins come the 
+            triangles.<br>
+            The mesh header variable </font><font color="#999900" face=Arial>Triangle_num</font><font face=Arial> 
+            holds the ammount of triangles..</font><br></p>
+        </div>
+        <div align="left"> 
+          <p><b><font face=Arial>TRIANGLE </font></b></p>
+        </div>
+        <blockquote> 
+          <div align="left"> 
+            <pre><font color="#999900">int  Triangle[3]; //vertex 1,2,3 of triangle
+             </font> </pre>
+          </div>
+        </blockquote>
+        <div align="left"> 
+          <p><font face=Arial><b><i><font size="2">comments:</font></i></b></font><font size="2"><br>
+            <font face=Arial>This is the simplest of 
+            structures.<br>
+            A triangle has 3 points which make up the triangle, each point is 
+            a vertex and the three ints that the triangle has point to those vertices.<br>
+            So you have a list of vertices, for example you have a list of 28 
+            vertices and the triangle uses 3 of them: vertex 1, vertex 14 and 
+            vertex 7.<br>
+            Then the ints contain 1, 14 and 7.<br>
+            </font></font></p>
+          <p>&nbsp;</p>
+          <p><font face=Arial>After the triangle data 
+            come the texture u/v coordinates of each vertex. The mesh header variable 
+            </font><font color="#999900" face=Arial>Vertex_num</font><font face=Arial> 
+            holds the ammount of u/v coordinates and vertices..<br>
+            You have an U/V coordinate per vertex.</font><br></p>
+        </div>
+        <div align="left"><font face=Arial><b>TEXTURE 
+          U/V COORDINATES:</b></font><br>
+          <br>
+        </div>
+        <blockquote> 
+          <div align="left"> 
+            <pre><font color="#999900">Vec2  TexVec; //Texture U/V coordinates of vertex 
+</font>           
+</pre>
+          </div>
+        </blockquote>
+        <div align="left"> 
+          <p><font face=Arial><b><i><font size="2">comments:</font></i></b></font><font size="2"><br>
+            <font face=Arial>U/V coordinates are basically 
+            the X/Y coordinates on the </font><font size="2"><font face=Arial>texture</font></font>.<font face=Arial><br>
+            This is used by the triangles to know which part of the skin to display.<br>
+            </font></font></p>
+          <p>&nbsp;</p>
+          <p><font face=Arial>After the texture u/v coordinates 
+            come the vertices.<br>
+            The mesh header variable </font><font color="#999900" face=Arial>Vertex_num</font><font face=Arial> 
+            holds the ammount of vertices per frame, and the mesh header variable 
+            </font><font color="#999900" face=Arial>MeshFrame_num</font><font face=Arial> 
+            contains the ammount of frames in the mesh.<br>
+            So you have </font><font color="#999900" face=Arial>MeshFrame_num 
+            </font><font face=Arial>times <font color="#999900">Vertex_num</font></font><font face=Arial> 
+            vertices. <br>
+            </font></p>
+        </div>
+        <div align="left"> <b><font face=Arial>VERTICES: 
+          </font></b><br>
+        </div>
+        <blockquote> 
+          <div align="left"> 
+            <pre>
+             
+<font color="#999900">//!!!important!!! signed!<br>signed short Vec[3];   //vertex X/Y/Z coordinate
+unsigned char EnvTex[2];   //enviromental mapping texture coordinates<br>             </font> </pre>
+          </div>
+        </blockquote>
+        <div align="left"><font face=Arial><b><i><font size="2">comments:</font></i></b></font><font size="2"><br>
+          <font face=Arial>Vec contains the 3d xyz coordinates 
+          of the vertices that form the model.</font><font size="2"><font face=Arial>EnvTex 
+          contains the texture coordinates for the enviromental mapping.<br>
+          Why does md3 have a second set of texture coordinates?<br>
+          Because:<br>
+          1. </font></font>these texture coordinates need to be interpolated when 
+          the model changes shape,<br>
+          2. these texture coordinates are different from the normal texture coordinates 
+          but still both need to be used (with shaders you can have multi-layered 
+          surfaces, one could be an enviromental map, an other could be a transparent 
+          texture) <font face=Arial><br>
+          </font></font><font size="2"><font face=Arial> 
+          </font></font></div>
+      </blockquote>
+    </td>
+    </tr>
+  </table>
+</body>
+</html>
+<NOSCRIPT>

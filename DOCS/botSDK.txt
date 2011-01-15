@@ -1,0 +1,321 @@
+NFK BOT DEVELOPMENT SDK
+By 3d[Power]
+
+Встроенные в NFK.EXE процедуры и функции. Вызываются из bot.dll.
+
+
+Function GetSystemVariable(text : string) : string;
+
+Возвращает значение системных переменных.
+
+Example: 
+	Var RootDirectory : string;
+	begin
+	RootDirectory := GetSystemVariable('rootdir');
+	End;
+
+Значения параметра text, задаются они в нижнем регистре:
+rootdir - путь к рабочей папке нфк (c:\nfk\basenfk)
+mapname - имя карты (tourney4), возвращается без расширения .mapa
+mapfilename - полный путь к файлу карты (c:\nfk\basenfk\maps\tourney4.mapa). 
+mapinternalname - внутреннее имя карты (more frags & martini);
+mapauthor - автор карты.
+mapcrc32 - CRC32 карты.
+playerscount - количество игроков.
+playerscount_red - количество игроков которые в красной команде.
+playerscount_blue - количество игроков которые в синей команде.
+teamscore_red - количество очков красной команды. (team games only).
+teamscore_blue - количество очков синей команды. (team games only).
+gamesudden - идет ли сейчас sudden death.
+timelimit - значение timelimit (в минутах).
+fraglimit - значение fraglimit (в минутах).
+capturelimit - значение capturelimit.
+domlimit - значение domlimit.
+overtime - значение overtime.
+ctfflagstatus_red - статус красного флага (CTF). 0=base, 1=carried, 2=lost.
+ctfflagstatus_blue - статус синего флага (CTF). 0=base, 1=carried, 2=lost.
+time_min - текущее время. Минуты. (в партии).
+time_sec - текущее время. Секунды. (в партии).
+warmupleft - время до конца разыгровки. В секундах. (в партии).
+gametype - возвращает режим игры (DM).
+bricks_x - количество бриков по горизонтали. Отсчет начинается с 0, тоесть результат 29 - значит 30.
+bricks_y - количество бриков по вертикали. Отсчет начинается с 0, тоесть результат 19 - значит 20.
+nfkversion - версия NFK.
+warmuparmor - значение консольной команды warmuparmor.
+forcerespawn - значение консольной команды forcerespawn.
+sv_maxplayers - значение консольной команды sv_maxplayers.
+sv_teamdamage - значение консольной команды sv_teamdamage.
+railarenainstagib - значение консольной команды railarenainstagib.
+
+Procedure AddMessage(text : string);
+
+Example:
+	AddMessage('Hi everybody');
+
+Выводит text на консоль. (Тэги цвета - работают).
+
+Procedure sys_CreatePlayer(netname, nfkmodel : string; team : byte);
+
+Example
+	Sys_CreatePlayer('bot', 'sarge+red' ,0);
+
+Создает игрока, под управлением бота.
+Netname - имя игрока. (player3).
+Nfkmodel - модель игрока. (sarge+red).
+Team - команда игрока. В не командных режимах игры, переменная игнорируется.
+
+	Team. const
+C_TEAMBLUE = 0;
+C_TEAMRED = 1;
+C_TEAMNON = 2;
+
+Вашему созданному боту назначается уникальный DXID.
+
+Procedure SetKeys(DXID: word; keys : byte);
+
+Нажатие кнопок у игрока, эта команда сработает только в случае если игрок - бот.
+
+DXID - уникальный DXID.
+Keys - кнопки, они назначаются суммой.
+
+	Keys. const
+BKEY_MOVERIGHT = 1;
+BKEY_MOVELEFT = 2;
+BKEY_MOVEUP = 8;
+BKEY_MOVEDOWN = 16;
+BKEY_FIRE = 32;	
+
+Example:
+	SetKeys(Players[I].DXID, BKEY_MOVERIGHT + BKEY_MOVEUP + BKEY_FIRE);
+	Нажаты кнопки вправо, вверх, выстрел.
+
+Чтобы проверить наличие кнопки:
+
+	Var mykeys : byte;
+	Begin
+Mykeys := BKEY_MOVERIGHT + BKEY_MOVEUP + BKEY_FIRE;
+SetKeys(Players[I].DXID, Mykeys);
+If mykeys and BKEY_MOVEUP = BKEY_MOVEUP then addmessage('I am jumping');
+	End;
+
+
+Procedure SetWeapon(DXID: word; weapon : byte);
+
+Выбрать оружие.
+
+DXID - уникальный DXID.
+weapon - номер оружия.
+	
+	Weapon. const
+C_WPN_GAUNTLET=0;
+C_WPN_MACHINE=1;
+C_WPN_SHOTGUN=2;
+C_WPN_GRENADE=3;
+C_WPN_ROCKET=4;
+C_WPN_SHAFT=5;
+C_WPN_RAIL=6;
+C_WPN_PLASMA=7;
+C_WPN_BFG=8;
+
+Example:
+	SetWeapon(players[I].DXID, C_WPN_ROCKET);
+
+Оружие включится в случае его наличия.
+
+
+
+Function Test_Blocked(X, Y : word) : Boolean;
+
+Проверяет проходим ли брик в позиции X, Y
+
+Example:
+	if Test_Blocked (trunc(players[i].x + 15),trunc(players[i].y)) then //
+	(проверяет есть ли стена справа от выбранного игрока)
+
+
+Procedure debug_textout(x, y : word; text : string);
+
+Выводит текст в позиции X, Y. Используется для вывода дебаг информации, например пометка вэйпоинтов.
+
+Example:
+   debug_textout(100, 100, 'test1');
+
+
+Procedure RegisterConsoleCommand(s: string);
+
+Регистрирует наличие добавленной вами консольной команды, в nfk.exe
+(Вызывается из bot_register.pas в процедуре CMD_Register)
+
+
+
+function GetBrickStruct(x, y : word):TBrick;
+
+Возвращает record с содержимым брика в позиции x, y;
+
+{
+type    TBrick = record // do not modify
+        image : byte;          // graphix index
+        block : boolean;       // do this brick block player;
+        respawntime : integer; // respawn time
+        y           : shortint;
+        dir         : byte;
+        oy          : real;
+        respawnable : boolean; // is this shit can respawn?
+        scale       : byte;
+        end;
+}
+
+Например:
+
+Var tmp : Tbrick;
+
+	Tmp := GetBrickStruct(1,1);
+
+	tmp.image - это картинка брика, константы под image указаны в bot_defs.pas (IT_ARMOR например)
+	tmp.block - Проверяет проходим ли брик (взятие этой переменной аналогично Test_Blocked())
+	tmp.respawntime - если брик это предмет, то если respawntime = 0 значит предмет есть, иначе respawntime означает сколько времени осталось до респавна предмета (в условных единицах времени)
+	tmp.y - не используется (вродебы)
+	tmp.dir - если это CTF флаг и dir=0 то флаг стоит на месте, иначе нет. если это DOM флаг, то dir показывает его цвет. Во всех других случаях dir не используется.
+	tmp.oy - не используется (вродебы)
+	tmp.respawnable - например аптечка respawnable, джамппад нет
+	tmp.scale - не используется
+
+
+
+function GetObjStruct(ID : word):TObj;
+
+Доступ к массиву объектов.
+
+type    TObj = record // do not modify
+        dead : byte;
+        speed,fallt,weapon,doublejump,refire : byte;
+        imageindex,dir,idd : byte;
+        clippixel : smallint;
+        spawnerDXID : word;
+        frame : byte;
+        health : smallint;
+        x,y,cx,cy,fangle,fspeed : real;
+        objname : string[30];
+        DXID : word;
+        mass, InertiaX,InertiaY : real;
+        end;
+
+
+Var tmp : Tbrick;
+	Tmp := GetObjStruct(0);
+
+Массив объектов objs: array [0..1000] of TObj;
+Причем, если tmp.dead > 0 то данный объект не действителен.
+
+Допустим чтобы вам найти все запущенные ракеты на карте, нужно делать так:
+	for i := 0 to 1000 do
+		if GetObjStruct(i).dead=0 then
+			if GetObjStruct(i).objname='rocket' then ...
+
+
+Данный тип был заведен достаточно давно, года 2 назад. Здесь большинство названий переменных не соотвествует действительности...
+И массив не динамический (2 года назад я не умел делать другие).
+
+----------------------------
+Объект CTF FLAG
+tmp.objname = 'flag' - уроненный CTF флаг.
+tmp.x
+tmp.y
+tmp.imageindex - цвет
+----------------------------
+Объект WEAPON
+tmp.objname = 'weapon' - выпавшее оружие.
+tmp.x
+tmp.y
+tmp.imageindex - ID оружия
+----------------------------
+Объект GRENADE
+tmp.objname = 'grenade' - запущенная граната.
+tmp.x
+tmp.y
+tmp.spawnerDXID - DXID того кто ее запустил.
+tmp.inertiax - velocity по X
+tmp.inertiay - velocity по Y
+tmp.clippixel - коробка вокруг гранаты, для зацепляния за брики
+----------------------------
+Объект ROCKET
+tmp.objname = 'rocket' - запущенная ракета.
+tmp.x
+tmp.y
+tmp.spawnerDXID - DXID того кто ее запустил.
+tmp.inertiax - velocity по X
+tmp.inertiay - velocity по Y
+tmp.clippixel - коробка вокруг ракеты, для зацепляния за брики
+tmp.fallt - если 1 то это BFG снаряд
+tmp.fangle - угол полета. Реальный угол полета angle = (fangle-90);
+	формула полета:
+	x := x + tmp.fspeed*CosTable[angle];
+      y := y + tmp.fspeed*SinTable[angle];
+----------------------------
+Объект PLASMA
+tmp.objname = 'plasma' - запущенная плазма.
+tmp.x
+tmp.y
+tmp.spawnerDXID - DXID того кто ее запустил.
+tmp.inertiax - velocity по X
+tmp.inertiay - velocity по Y
+tmp.clippixel - коробка вокруг плазмы, для зацепляния за брики
+tmp.fangle - угол полета. Реальный угол полета angle = (fangle-90);
+	формула полета:
+	x := x + tmp.fspeed*CosTable[angle];
+      y := y + tmp.fspeed*SinTable[angle];
+----------------------------
+
+прочие objname:
+shaft2, blood, smoke, shotgun, gauntlet, machine, rail, gib, shots, shots2, bubble, flash
+(использовать их крайне не рекомендуется).
+
+
+
+
+function GetSpecObjStruct(ID : byte):TSpecObj;
+
+Доступ к массиву спец объектов. Таких как двери, кнопки, итп.
+Массив объектов objs: array [0..1000] of TObj;
+
+type    TSpecObj = record  // do not modify
+        active : boolean;
+        x,y,lenght,dir,wait : word;
+        targetname,target,orient,nowanim,special:word;
+        objtype : byte;
+        end;
+
+Причем, если active = false то данный спец объект не действителен.
+
+Данный тип был заведен достаточно давно, года 2 назад. Здесь большинство названий переменных не соотвествует действительности...
+И массив не динамический (2 года назад я не умел делать другие).
+
+
+ужно делать так:
+	for i := 0 to 255 do
+		if GetSpecObjStruct(i).active then ...
+	else break; // при первом появлении active=false можно прекращать сканирование.
+
+------------------------
+tmp.objtype = 1 - teleporter
+tmp.x - position X
+tmp.y - position Y
+tmp.lenght - destination X
+tmp.dir - destination Y
+------------------------
+tmp.objtype = 2 - button
+tmp.x - position X
+tmp.y - position Y
+tmp.targetname - статус зажатости кнопки (1=зажата)
+tmp.lenght - время зажатости, переменная уменьшается, при достижении 0, targetname становится 0
+tmp.wait - при нажатии lenght присваивается wait.
+tmp.target - TARGET_ID. ищет door или area_pain у которого targetname=tmp.target и активирует его
+------------------------
+tmp.objtype = 3 - door
+tmp.orient - ориентация двери.  (0=closed, horizontal ||| 1=closed, vertical ||| 2=opened, horizontal ||| 3=opened, vertical)
+tmp.targetname - TARGET_ID. активируется by button, trigger, area_push.
+
+Дальше вспомнить и разобрать что там написано не смог, скажу только что
+tmp.target и
+tmp.dir 
+учавствуют в статусе двери (открытая \ закрытая)
